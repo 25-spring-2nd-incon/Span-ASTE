@@ -9,7 +9,7 @@
     "token_indexers": {
       "bert": {
         "max_length": 512,
-        "model_name": "bert-base-uncased",
+        "model_name": "klue/bert-base",
         "type": "pretrained_transformer_mismatched"
       }
     },
@@ -20,7 +20,7 @@
       "token_embedders": {
         "bert": {
           "max_length": 512,
-          "model_name": "bert-base-uncased",
+          "model_name": "klue/bert-base",
           "type": "pretrained_transformer_mismatched"
         }
       }
@@ -63,12 +63,11 @@
       ]
     },
     "modules": {
-      "ner": {
-      },
+      "ner": {},
       "relation": {
         "spans_per_word": 0.5,
         "use_distance_embeds": true,
-        "use_pruning": true,
+        "use_pruning": true
       }
     },
     "span_extractor_type": "endpoint",
@@ -80,12 +79,12 @@
     "checkpointer": {
       "num_serialized_models_to_keep": 1
     },
-    "cuda_device": 0,
+    "cuda_device": -1,
     "grad_norm": 5,
     "learning_rate_scheduler": {
       "type": "slanted_triangular"
     },
-    "num_epochs": 10,
+    "num_epochs": 1,
     "optimizer": {
       "lr": 0.001,
       "parameter_groups": [

@@ -11,3 +11,4 @@ aste/data/
 models/
 model_outputs/
 outputs/
+pretrained_dir/

@@ -6,14 +6,14 @@ pip install -r requirements.txt
 pip uninstall dataclasses -y # Compatibility issue with Python > 3.6
 
 # Optional: Set up NLTK packages
-if [[ -f punkt.zip ]]; then
-	mkdir -p /home/admin/nltk_data/tokenizers
-	cp punkt.zip /home/admin/nltk_data/tokenizers
-fi
-if [[ -f wordnet.zip ]]; then
-	mkdir -p /home/admin/nltk_data/corpora
-	cp wordnet.zip /home/admin/nltk_data/corpora
-fi
+# if [[ -f punkt.zip ]]; then
+# 	mkdir -p ./nltk_data/tokenizers
+# 	cp punkt.zip ./nltk_data/tokenizers
+# fi
+# if [[ -f wordnet.zip ]]; then
+# 	mkdir -p ./nltk_data/corpora
+# 	cp wordnet.zip ./nltk_data/corpora
+# fi
 
 # Make sample data for quick debugging
 unzip -n data.zip -d aste/

@@ -152,7 +152,7 @@ class SpanModel(BaseModel):
         train_model(params, serialization_dir=str(weights_dir))
 
     def predict(self, path_in: str, path_out: str):
-        path_model = Path(self.save_dir) / "weights" / "model.tar.gz"
+        path_model = Path(self.save_dir) / "weights" / "model"  # 수정
         path_temp_in = self.save_temp_data(path_in, "pred_in", is_test=True)
         path_temp_out = Path(self.save_dir) / "temp_data" / "pred_out.json"
         if path_temp_out.exists():
@@ -165,7 +165,7 @@ class SpanModel(BaseModel):
             weights_file="",
             batch_size=1,
             silent=True,
-            cuda_device=0,
+            cuda_device=-1,
             use_dataset_reader=True,
             dataset_reader_choice="validation",
             overrides="",
