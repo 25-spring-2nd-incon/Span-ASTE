@@ -4,11 +4,12 @@ def get_span_indices(tokens, span_tokens, span_text):
     """
         부분 문자열 검색을 통해 span 인덱스 찾기
         처음 일치하는 span에 대한 index만 반환하는 점이 한계임
+        예: "너무 좋아요" → [2, 3]
     """
 
     for i in range(len(tokens) - len(span_tokens) + 1):
         if tokens[i:i + len(span_tokens)] == span_tokens:
-            return i, i + len(span_tokens) - 1
+            return list(range(i, i + len(span_tokens)))
 
     raise ValueError(f"Span '{span_text}' not found in tokenized sentence.")
 
