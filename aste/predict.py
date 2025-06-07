@@ -4,13 +4,17 @@ sys.path.append("aste")
 from pathlib import Path
 from data_utils import Data, Sentence, SplitEnum
 from wrapper import SpanModel
+from transformers import AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained("klue/bert-base")
 
 
 def predict_sentence(text: str, model: SpanModel) -> Sentence:
     path_in = "sample_input.txt"
     path_out = "sample_output.txt"
     
-    sent = Sentence(tokens=text.split(), triples=[], pos=[], is_labeled=False, weight=1, id=0)
+    tokens = tokenizer.tokenize(text)
+    sent = Sentence(tokens=tokens, triples=[], pos=[], is_labeled=False, weight=1, id=0)
     data = Data(root=Path(), data_split=SplitEnum.test, sentences=[sent])
     data.save_to_path(path_in)
     
@@ -21,7 +25,9 @@ def predict_sentence(text: str, model: SpanModel) -> Sentence:
 
 # text = "I love the shape , but the fan is too noisy ."
 # text = "Did not enjoy the new Windows 8 and touchscreen functions ."
-text = "디자인이 예쁘고 속도도 빨라요 ."
+# text = "디자인이 예쁘고 속도도 빨라요 ."
+text = "말라보이긴 한데 좀 애매해서 살 빼고 입겟읍니덩"
+# text = "핏은 별로인데, 색상은 괜찮아요"
 model = SpanModel(save_dir="pretrained_dir", random_seed=0)
 sent = predict_sentence(text, model)
 

@@ -143,7 +143,7 @@ if __name__ == "__main__":
     results = []
     label_indices(results, sentences, tokenizer)
     for r in results:
-        print(r, end="\n\n");
+        print(r, end="\n\n")
 
     with open('aste/data/triplet_data/korean_sample/train.txt', 'w') as w:
             w.writelines([r["train"] + "\n" for r in results])
