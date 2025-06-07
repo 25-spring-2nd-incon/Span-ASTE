@@ -3,14 +3,15 @@ sys.path.append("aste")
 
 from wrapper import SpanModel
 
-def train_from_scratch():
-    random_seed = 2
-    path_train = "aste/data/triplet_data/sample/train.txt"
-    path_dev = "aste/data/triplet_data/sample/dev.txt"
-    path_test = "aste/data/triplet_data/sample/test.txt"
-    save_dir = f"outputs/sample/seed_{random_seed}"
+RANDOM_SEED = 1
+PATH_TRAIN = "aste/data/triplet_data/korean_sample/train.txt"
+PATH_DEV = "aste/data/triplet_data/korean_sample/dev.txt"
+PATH_TEST = "aste/data/triplet_data/korean_sample/test.txt"
+SAVE_DIR = f"outputs/sample/seed_{RANDOM_SEED}"
 
-    model = SpanModel(save_dir=save_dir, random_seed=random_seed)
+
+def train_from_scratch(path_train, path_dev, save_dir):
+    model = SpanModel(save_dir=save_dir, random_seed=RANDOM_SEED)
     model.fit(path_train, path_dev)
 
-train_from_scratch()
+train_from_scratch(PATH_TRAIN, PATH_DEV, SAVE_DIR)
