@@ -1,0 +1,49 @@
+import re
+import unicodedata
+import emoji
+
+# 반복 문자 축약 대상 (초성, 자음, 특수문자)
+REPEAT_CHAR_PATTERN = re.compile(r'([ㅋㅎㅠㅜㅇㄱ.,!?])\1{1,}', re.UNICODE)
+
+# URL, 이메일, mojibake(�), 공백 패턴
+url_pattern = re.compile(r'https?:\/\/[^\s]+')
+email_pattern = re.compile(r'\S+@\S+')
+mojibake_pattern = re.compile(r'�+')
+
+# 이모지 제거 함수
+def remove_emojis(text):
+    return emoji.replace_emoji(text, replace='')
+
+# 반복 문자 정규화 함수
+def normalize_repeats(text, repeat_limit=2):
+    return REPEAT_CHAR_PATTERN.sub(lambda m: m.group(1) * repeat_limit, text)
+
+# 최종 클렌징 함수
+def clean_text(text: str, keep_english: bool = True) -> str:
+    # 1. 유니코드 정규화
+    text = unicodedata.normalize("NFKC", text)
+
+    # 2. URL, 이메일 제거
+    text = url_pattern.sub('', text)
+    text = email_pattern.sub('', text)
+
+    # 3. mojibake 문자 제거
+    text = mojibake_pattern.sub('', text)
+
+    # 4. 반복 문자 정규화 (ㅋㅋㅋ, ㅠㅠㅠㅠ, !!!, ... → 2개로)
+    text = normalize_repeats(text, repeat_limit=2)
+
+    # 5. 이모지 제거
+    text = remove_emojis(text)
+
+    # 6. 특수문자 정리
+    if keep_english:
+        pattern = re.compile(r"[^ .,?!/@$%~％·∼()\x00-\x7Fㄱ-ㅣ가-힣]+")
+    else:
+        pattern = re.compile(r"[^ .,?!/@$%~％·∼()ㄱ-ㅣ가-힣]+")
+    text = pattern.sub(" ", text)
+
+    # 7. 공백 정리
+    text = re.sub(r"\s+", " ", text).strip()
+
+    return text
