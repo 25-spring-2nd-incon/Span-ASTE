@@ -1,5 +1,6 @@
 from transformers import AutoTokenizer
 
+
 def get_span_indices(tokens, span_tokens, span_text):
     """
         부분 문자열 검색을 통해 span 인덱스 찾기
@@ -65,7 +66,7 @@ if __name__ == "__main__":
             "triples": [
                 {
                     "aspect_span": "말라보이긴",
-                    "opinion_span": "애매",
+                    "opinion_span": "애매해서",
                     "polarity": "NEG",
                 }
             ]
@@ -84,14 +85,54 @@ if __name__ == "__main__":
             "sentence": "재질도 넘 좋구 밑이 라운드 모양으로 마감 된게 너무 이뻐여..!",
             "triples": [
                 {
-                    "aspect_span": "재질",
-                    "opinion_span": "좋구",
+                    "aspect_span": "재질도",
+                    "opinion_span": "넘 좋구",
                     "polarity": "POS",
                 },
                 {
                     "aspect_span": "밑",
                     "opinion_span": "이뻐여",
                     "polarity": "POS",
+                }
+            ]
+        },
+        {
+            "sentence": "색상이 화면이랑 같아요.",
+            "triples": [
+                {
+                    "aspect_span": "색상이",
+                    "opinion_span": "같아요",
+                    "polarity": "NEU",
+                }
+            ]
+        },
+        {
+            "sentence": "색상은 같은데, 핏이 별로예요.",
+            "triples": [
+                {
+                    "aspect_span": "색상은",
+                    "opinion_span": "같은데",
+                    "polarity": "NEU",
+                },
+                {
+                    "aspect_span": "핏이",
+                    "opinion_span": "별로예요",
+                    "polarity": "NEG",
+                }
+            ]
+        },
+        {
+            "sentence": "사이즈가 나쁘지 않은데, 핏도 그냥 그래요",
+            "triples": [
+                {
+                    "aspect_span": "사이즈가",
+                    "opinion_span": "나쁘지 않은데",
+                    "polarity": "NEU",
+                },
+                {
+                    "aspect_span": "핏도",
+                    "opinion_span": "그냥 그래요",
+                    "polarity": "NEU",
                 }
             ]
         }
@@ -101,6 +142,8 @@ if __name__ == "__main__":
 
     results = []
     label_indices(results, sentences, tokenizer)
-
     for r in results:
-        print(r)
+        print(r, end="\n\n");
+
+    with open('aste/data/triplet_data/korean_sample/train.txt', 'w') as w:
+            w.writelines([r["train"] + "\n" for r in results])
