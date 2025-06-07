@@ -1,1 +1,1 @@
-디자인이 예쁘고 속도도 빨라요 .#### #### ####[]
+Did not enjoy the new Windows 8 and touchscreen functions .#### #### ####[([5, 6], [1, 2], 'NEG'), ([8, 9], [1, 2], 'NEG')]
