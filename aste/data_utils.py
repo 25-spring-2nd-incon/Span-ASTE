@@ -195,6 +195,7 @@ class Sentence(BaseModel):
                 o_end=b[0] if len(b) == 1 else b[-1],
                 label=label,
             )
+            print(f"DEBUG:data_utils.py: {label}")
             triples.append(t)
 
         return cls(

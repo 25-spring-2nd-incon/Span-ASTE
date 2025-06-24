@@ -53,6 +53,7 @@ class SpanModelReader(DatasetReader):
 
     @overrides
     def _read(self, file_path: str):
+        print(f"DEBUG: span_model.py: Reading file {file_path}")
         # if `file_path` is a URL, redirect to the cache
         file_path = cached_path(file_path)
 
@@ -63,7 +64,9 @@ class SpanModelReader(DatasetReader):
         for line in lines:
             # Loop over the documents.
             doc_text = json.loads(line)
+            print(f"DEBUG: doc_text={doc_text}")
             instance = self.text_to_instance(doc_text)
+            print(f"DEBUG: instance={instance}")
             yield instance
 
     def _too_long(self, span):

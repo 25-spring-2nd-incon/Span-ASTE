@@ -84,7 +84,7 @@
     "learning_rate_scheduler": {
       "type": "slanted_triangular"
     },
-    "num_epochs": 5,
+    "num_epochs": 1,
     "optimizer": {
       "lr": 0.001,
       "parameter_groups": [
@@ -115,7 +115,7 @@
   "numpy_seed": 0,
   "pytorch_seed": 0,
   "random_seed": 0,
-  "test_data_path": "",
-  "train_data_path": "",
-  "validation_data_path": ""
+  "test_data_path": "aste/data/triplet_data/korean_sample/test.txt",
+  "train_data_path": "aste/data/triplet_data/korean_sample/train.txt",
+  "validation_data_path": "aste/data/triplet_data/korean_sample/dev.txt"
 }
