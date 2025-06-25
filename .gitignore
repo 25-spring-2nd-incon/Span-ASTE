@@ -8,6 +8,8 @@ punkt.zip
 wordnet.zip
 .idea/
 aste/data/
+!aste/data/triplet_data/korean_sample/
+!aste/data/triplet_data/korean_sample/**
 models/
 model_outputs/
 outputs/
