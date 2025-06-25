@@ -59,6 +59,8 @@ class SpanModelPrediction(SpanModelDocument):
             SentimentTriple(o_start=os, o_end=oe, t_start=ts, t_end=te, label=label)
             for os, oe, ts, te, label, value, prob in self.predicted_relations[0]
         ]
+        print(f"DEBUG:SpanModelPrediction.predcited_relations[0]={self.predicted_relations[0]}")
+        print(f"DEBUG:self.sentences[0]:{self.sentences[0]}")
         return Sentence(
             id=int(self.doc_key),
             tokens=self.sentences[0],
@@ -184,6 +186,7 @@ class SpanModel(BaseModel):
 
         with open(path_temp_out) as f:
             preds = [SpanModelPrediction(**json.loads(line.strip())) for line in f]
+            print(f"DEBUG:wrapper.py:preds:{preds}")
         data = Data(
             root=Path(),
             data_split=SplitEnum.test,

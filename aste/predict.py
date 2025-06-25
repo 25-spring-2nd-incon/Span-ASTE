@@ -13,8 +13,7 @@ def predict_sentence(text: str, model: SpanModel) -> Sentence:
     path_in = "sample_input.txt"
     path_out = "sample_output.txt"
     
-    tokens = tokenizer.tokenize(text)
-    sent = Sentence(tokens=tokens, triples=[], pos=[], is_labeled=False, weight=1, id=0)
+    sent = Sentence(tokens=tokenizer.tokenize(text), triples=[], pos=[], is_labeled=False, weight=1, id=0)
     data = Data(root=Path(), data_split=SplitEnum.test, sentences=[sent])
     data.save_to_path(path_in)
     
@@ -25,9 +24,10 @@ def predict_sentence(text: str, model: SpanModel) -> Sentence:
 
 # text = "I love the shape , but the fan is too noisy ."
 # text = "Did not enjoy the new Windows 8 and touchscreen functions ."
-# text = "디자인이 예쁘고 속도도 빨라요 ."
+text = "디자인이 예쁘고 속도도 빨라요 ."
 # text = "말라보이긴 한데 좀 애매해서 살 빼고 입겟읍니덩"
-text = "핏은 별로인데, 색상은 괜찮아요"
+# text = "색상은 같은데, 핏이 별로예요."
+# text = "색 개다름.."
 model = SpanModel(save_dir="pretrained_dir", random_seed=0)
 sent = predict_sentence(text, model)
 

@@ -15,6 +15,9 @@ from sklearn.metrics import classification_report
 
 from utils import count_joins, get_simple_stats
 
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("klue/bert-base")
+
 RawTriple = Tuple[List[int], int, int, int, int]
 Span = Tuple[int, int]
 
@@ -184,7 +187,8 @@ class Sentence(BaseModel):
     @classmethod
     def from_line_format(cls, text: str):
         front, back = text.split("#### #### ####")
-        tokens = front.split(" ")
+        # tokens = front.split(" ")
+        tokens = tokenizer.tokenize(front)
         triples = []
 
         for a, b, label in ast.literal_eval(back):
@@ -216,7 +220,9 @@ class Sentence(BaseModel):
             parts.append(f"{t.label}")
             triplets.append(tuple(parts))
 
-        line = " ".join(self.tokens) + "#### #### ####" + str(triplets) + "\n"
+        line = tokenizer.convert_tokens_to_string(self.tokens) + "#### #### ####" + str(triplets) + "\n"
+        print("self.from_line_format: ", self.from_line_format(line).tokens)
+        print("self.tokens:", self.tokens)
         assert self.from_line_format(line).tokens == self.tokens
         assert self.from_line_format(line).triples == self.triples
         return line

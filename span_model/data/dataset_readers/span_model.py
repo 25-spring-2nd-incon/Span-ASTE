@@ -22,6 +22,14 @@ from overrides import overrides
 
 from span_model.data.dataset_readers.document import Document, Sentence
 
+# tokenizer -> preprocess sentence
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("klue/bert-base")
+
+import os
+import time
+
+
 logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
 
@@ -59,8 +67,11 @@ class SpanModelReader(DatasetReader):
 
         with open(file_path, "r") as f:
             lines = f.readlines()
+        print(f"DEBUG: lines: {lines}")
 
-        self.is_train = "train" in file_path  # New
+        filename = os.path.basename(file_path)
+        self.is_train = ("train" in filename) or ("dev" in filename)  # New
+        print(f"DEBUG:is_train at ._read():{self.is_train}");
         for line in lines:
             # Loop over the documents.
             doc_text = json.loads(line)
@@ -109,6 +120,16 @@ class SpanModelReader(DatasetReader):
     def _process_sentence(self, sent: Sentence, dataset: str):
         # Get the sentence text and define the `text_field`.
         sentence_text = [self._normalize_word(word) for word in sent.text]
+
+        # sentence_str = " ".join(sent.text)
+        # if self.is_train:
+        #     sentence_text = tokenizer.tokenize(sentence_str)
+        #     print(f"DEBUG: SpanModelReader._process_sentence: {sentence_text}")
+        # else:
+        #     sentence_text = sent.text
+        # print(f"DEBUG:is_train:{self.is_train}")
+        # time.sleep(0.7)
+        
         text_field = TextField(
             [Token(word) for word in sentence_text], self._token_indexers
         )
@@ -166,6 +187,8 @@ class SpanModelReader(DatasetReader):
 
     def _process_sentence_fields(self, doc: Document):
         # Process each sentence.
+        for sent in doc.sentences:
+            print(f"DEBUG:sent: {sent}")
         sentence_fields = [
             self._process_sentence(sent, doc.dataset) for sent in doc.sentences
         ]
