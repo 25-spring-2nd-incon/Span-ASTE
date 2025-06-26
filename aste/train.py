@@ -2,12 +2,16 @@ import sys
 sys.path.append("aste")
 
 from wrapper import SpanModel
+from datetime import datetime
 
-RANDOM_SEED = 1
-PATH_TRAIN = "aste/data/triplet_data/korean_sample/train.txt"
-PATH_DEV = "aste/data/triplet_data/korean_sample/dev.txt"
-PATH_TEST = "aste/data/triplet_data/korean_sample/test.txt"
-SAVE_DIR = f"outputs/sample/seed_{RANDOM_SEED}"
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+
+RANDOM_SEED = 42
+PATH_TRAIN = "aste/data/triplet_data/ably/jsonl/train.jsonl"
+PATH_DEV = "aste/data/triplet_data/ably/jsonl/dev.jsonl"
+PATH_TEST = "aste/data/triplet_data/ably/jsonl/test.jsonl"
+SAVE_DIR = f"outputs/sample/seed_{RANDOM_SEED}_{timestamp}"
 
 
 def train_from_scratch(path_train, path_dev, save_dir):
