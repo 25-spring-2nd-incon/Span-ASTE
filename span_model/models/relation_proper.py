@@ -343,6 +343,16 @@ class ProperRelationExtractor(Model):
             label_name = self.vocab.get_token_from_index(
                 label, namespace=self._active_namespace
             )
+
+            # --- [디버깅 코드 추가] ---
+            key_tuple = (tuple(span_1), tuple(span_2))
+            res_dict[key_tuple] = label_name
+            
+            # 디버깅을 위한 출력
+            if len(res_dict) == 1:
+                 print(f"[DEBUG PREDICT] Predicted Relation Key: {key_tuple} (opinion, target)")
+            # --- [디버깅 코드 종료] ---
+            
             prediction_entry = {
                 "o_span": span_1,       # (시작 인덱스, 끝 인덱스)
                 "t_span": span_2,       # (시작 인덱스, 끝 인덱스)

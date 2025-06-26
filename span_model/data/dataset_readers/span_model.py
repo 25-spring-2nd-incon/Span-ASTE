@@ -273,6 +273,15 @@ class SpanModelReader(DatasetReader):
                 ner_dict[opinion_span] = "OPINION"
             
             if aspect_span != (-1, -1) and opinion_span != (-1, -1):
+                
+                key_tuple = (opinion_span, aspect_span) # <-- 순서를 (opinion, aspect)로 변경
+                relation_dict[key_tuple] = sentiment
+                
+                # 디버깅을 위한 출력
+                if len(relation_dict) == 1: # 너무 많이 출력되지 않게 첫 번째 triplet만 출력
+                    print(f"[DEBUG READER] Gold Relation Key: {key_tuple} (opinion, target)")
+                # --- [디버깅 코드 종료] ---
+
                 relation_dict[(aspect_span, opinion_span)] = sentiment
         
         fields = {"text": text_field, "spans": span_field}
