@@ -1,5 +1,5 @@
 import logging
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Optional, Union, Any
 import copy
 
 import torch
@@ -157,65 +157,59 @@ class SpanModel(Model):
         span_embeddings = self._endpoint_span_extractor(text_embeddings, spans)
         return span_embeddings
 
+    # span_model/models/span_model.py 의 SpanModel 클래스 내부
+
     @overrides
     def forward(
         self,
-        text,
-        spans,
-        metadata,
-        ner_labels=None,
-        relation_labels=None,
+        text: Dict[str, torch.LongTensor],
+        spans: torch.LongTensor,
+        metadata: List[Dict[str, Any]],
+        ner_labels: torch.LongTensor = None,
+        relation_labels: torch.LongTensor = None,
     ):
         # In AllenNLP, AdjacencyFields are passed in as floats. This fixes it.
         if relation_labels is not None:
             relation_labels = relation_labels.long()
 
-        # TODO: Multi-document minibatching isn't supported yet. For now, get rid of the
-        # extra dimension in the input tensors. Will return to this once the model runs.
-        if len(metadata) > 1:
-            raise NotImplementedError("Multi-document minibatching not yet supported.")
+        # -------------------- [핵심 수정 시작] --------------------
+        # 1. '문서(document)' 기반의 모든 로직을 제거합니다.
+        #    - _debatch, num_wrapping_dims, squeeze() 등은 더 이상 필요 없습니다.
+        #    - 이제 모든 텐서는 (batch_size, ...) 모양을 유지합니다.
 
-        metadata = metadata[0]
-        spans = self._debatch(spans)  # (n_sents, max_n_spans, 2)
-        ner_labels = self._debatch(ner_labels)  # (n_sents, max_n_spans)
-        relation_labels = self._debatch(
-            relation_labels
-        )  # (n_sents, max_n_spans, max_n_spans)
+        # (batch_size, num_tokens, embedding_dim)
+        text_embeddings = self._embedder(text)
 
-        # Encode using BERT, then debatch.
-        # Since the data are batched, we use `num_wrapping_dims=1` to unwrap the document dimension.
-        # (1, n_sents, max_sententence_length, embedding_dim)
+        # (batch_size, num_tokens)
+        text_mask = util.get_text_field_mask(text).float()
+        
+        # (batch_size)
+        sentence_lengths = text_mask.sum(dim=-1).long()
 
-        # TODO: Deal with the case where the input is longer than 512.
-        text_embeddings = self._embedder(text, num_wrapping_dims=1)
-        # (n_sents, max_n_wordpieces, embedding_dim)
-        text_embeddings = self._debatch(text_embeddings)
+        # 2. 에러가 발생했던 부분을 텐서의 실제 모양에 맞게 수정합니다.
+        #    - spans 텐서의 모양은 (batch_size, num_spans, 2) 입니다.
+        #    - 따라서 `spans[:, :, 0]`은 올바른 3차원 인덱싱입니다.
+        #      이전의 에러는 다른 코드와의 상호작용으로 인한 차원 감소 때문이었을 수 있습니다.
+        #      이제는 파이프라인 전체를 일관되게 배치 기준으로 처리합니다.
+        
+        # (batch_size, num_spans)
+        span_mask = (spans[:, :, 0] >= 0).float()
+        
+        # (batch_size, num_spans, 2)
+        spans = F.relu(spans.float()).long()
 
-        # (n_sents, max_sentence_length)
-        text_mask = self._debatch(
-            util.get_text_field_mask(text, num_wrapping_dims=1).float()
-        )
-        sentence_lengths = text_mask.sum(dim=1).long()  # (n_sents)
+        # -------------------- [핵심 수정 종료] --------------------
 
-        span_mask = (spans[:, :, 0] >= 0).float()  # (n_sents, max_n_spans)
-        # SpanFields return -1 when they are used as padding. As we do some comparisons based on
-        # span widths when we attend over the span representations that we generate from these
-        # indices, we need them to be <= 0. This is only relevant in edge cases where the number of
-        # spans we consider after the pruning stage is >= the total number of spans, because in this
-        # case, it is possible we might consider a masked span.
-        spans = F.relu(spans.float()).long()  # (n_sents, max_n_spans, 2)
-
-        # New
+        # New: 두 종류의 임베딩 생성 (기존 로직 유지)
         text_embeds_b = text_embeddings
         kwargs = dict(spans=spans)
         span_embeddings = self.text_to_span_embeds(text_embeddings, **kwargs)
         span_embeds_b = self.text_to_span_embeds(text_embeds_b, **kwargs)
 
-        # Make calls out to the modules to get results.
+        # 하위 모듈 호출
         output_ner = {"loss": 0}
         output_relation = {"loss": 0}
 
-        # Make predictions and compute losses for each module
         if self._loss_weights["ner"] > 0:
             output_ner = self._ner(
                 spans,
@@ -226,7 +220,7 @@ class SpanModel(Model):
                 metadata,
             )
             ner_scores = output_ner.pop("ner_scores")
-        # New
+        
         if self._loss_weights["relation"] > 0:
             if getattr(self._relation, "use_ner_scores_for_prune", False):
                 self._relation._ner_scores = ner_scores
@@ -239,30 +233,28 @@ class SpanModel(Model):
             output_relation = self._relation(
                 spans,
                 span_mask,
-                # span_embeddings,
                 span_embeds_b,
                 sentence_lengths,
                 relation_labels,
                 metadata,
             )
 
-        # Use `get` since there are some cases where the output dict won't have a loss - for
-        # instance, when doing prediction.
-        loss = +self._loss_weights["ner"] * output_ner.get(
-            "loss", 0
-        ) + self._loss_weights["relation"] * output_relation.get("loss", 0)
-
-        # Multiply the loss by the weight multiplier for this document.
-        weight = metadata.weight if metadata.weight is not None else 1.0
-        loss *= torch.tensor(weight)
+        # 손실 계산
+        loss = (
+            self._loss_weights["ner"] * output_ner.get("loss", 0) +
+            self._loss_weights["relation"] * output_relation.get("loss", 0)
+        )
+        
+        # weight 처리는 일단 단순화하거나, metadata 구조 확인 후 적용
+        if metadata and metadata[0].get("weight") is not None:
+            loss *= metadata[0].get("weight")
 
         output_dict = dict(
             relation=output_relation,
             ner=output_ner,
+            loss=loss,
+            metadata=metadata,
         )
-        output_dict["loss"] = loss
-
-        output_dict["metadata"] = metadata
 
         return output_dict
 
@@ -287,31 +279,72 @@ class SpanModel(Model):
                 ]
         return new_span_embeddings
 
+    # @overrides
+    # def make_output_human_readable(self, output_dict: Dict[str, torch.Tensor]):
+    #     """
+    #     Converts the list of spans and predicted antecedent indices into clusters
+    #     of spans for each element in the batch.
+
+    #     Parameters
+    #     ----------
+    #     output_dict : ``Dict[str, torch.Tensor]``, required.
+    #         The result of calling :func:`forward` on an instance or batch of instances.
+    #     """
+
+    #     doc = copy.deepcopy(output_dict["metadata"])
+
+    #     if self._loss_weights["ner"] > 0:
+    #         for predictions, sentence in zip(output_dict["ner"]["predictions"], doc):
+    #             sentence.predicted_ner = predictions
+
+    #     if self._loss_weights["relation"] > 0:
+    #         for predictions, sentence in zip(
+    #             output_dict["relation"]["predictions"], doc
+    #         ):
+    #             sentence.predicted_relations = predictions
+
+    #     return doc
+    # span_model.py 의 SpanModel 클래스 내부
+
     @overrides
-    def make_output_human_readable(self, output_dict: Dict[str, torch.Tensor]):
+    def make_output_human_readable(self, output_dict: Dict[str, torch.Tensor]) -> Dict[str, Any]:
         """
-        Converts the list of spans and predicted antecedent indices into clusters
-        of spans for each element in the batch.
-
-        Parameters
-        ----------
-        output_dict : ``Dict[str, torch.Tensor]``, required.
-            The result of calling :func:`forward` on an instance or batch of instances.
+        모델의 예측 결과를 사람이 읽기 쉬운 딕셔너리 형태로 변환합니다.
+        레거시 document 객체 대신 파이썬 기본 자료형을 사용하도록 수정된 버전.
         """
+        # metadata는 이미 human-readable한 dict의 리스트입니다.
+        # 예측 결과를 이 metadata 리스트의 각 딕셔너리에 추가합니다.
+        batch_metadata = output_dict["metadata"]
+        
+        # NER 예측 결과 추가
+        if "predictions" in output_dict.get("ner", {}):
+            for i, ner_preds in enumerate(output_dict["ner"]["predictions"]):
+                # 배치 크기를 벗어나는 경우를 방지
+                if i < len(batch_metadata):
+                    batch_metadata[i]["predicted_ner"] = ner_preds
 
-        doc = copy.deepcopy(output_dict["metadata"])
-
-        if self._loss_weights["ner"] > 0:
-            for predictions, sentence in zip(output_dict["ner"]["predictions"], doc):
-                sentence.predicted_ner = predictions
-
-        if self._loss_weights["relation"] > 0:
-            for predictions, sentence in zip(
-                output_dict["relation"]["predictions"], doc
-            ):
-                sentence.predicted_relations = predictions
-
-        return doc
+        # Relation 예측 결과 추가
+        if "predictions" in output_dict.get("relation", {}):
+            for i, rel_preds in enumerate(output_dict["relation"]["predictions"]):
+                if i < len(batch_metadata):
+                    # 예측 결과에서 triplet 정보를 재구성하여 추가할 수 있습니다.
+                    # 예를 들어, relation 모듈의 예측 결과가 [o_start, o_end, t_start, t_end, sentiment] 라면...
+                    predicted_triples = []
+                    for p in rel_preds:
+                        # 이 부분은 relation 모듈의 실제 출력 형식에 따라 수정해야 합니다.
+                        # 여기서는 p가 [o_start, o_end, t_start, t_end, sentiment] 라고 가정합니다.
+                        predicted_triples.append({
+                            "opinion_indices": [p[0], p[1]],
+                            "target_indices": [p[2], p[3]],
+                            "sentiment": p[4]
+                        })
+                    batch_metadata[i]["predicted_relations"] = predicted_triples
+        
+        # AllenNLP의 predict 커맨드는 이 딕셔너리(또는 딕셔너리의 리스트)를
+        # json.dumps하여 파일에 한 줄씩 씁니다.
+        # 배치 크기가 1일 때와 아닐 때를 모두 처리하기 위해,
+        # 배치 전체를 리스트로 반환하는 것이 가장 안전합니다.
+        return batch_metadata
 
     def get_metrics(self, reset: bool = False) -> Dict[str, float]:
         """

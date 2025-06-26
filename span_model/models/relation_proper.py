@@ -12,7 +12,7 @@ from allennlp.modules import TimeDistributed
 
 from span_model.training.relation_metrics import RelationMetrics
 from span_model.models.entity_beam_pruner import Pruner
-from span_model.data.dataset_readers import document
+# from span_model.data.dataset_readers import document
 
 logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
@@ -181,7 +181,8 @@ class ProperRelationExtractor(Model):
         relation_labels: torch.IntTensor = None,
         metadata: List[Dict[str, Any]] = None,
     ) -> Dict[str, torch.Tensor]:
-        self._active_namespace = f"{metadata.dataset}__relation_labels"
+        dataset_name = "ably"
+        self._active_namespace = f"{dataset_name}__relation_labels"
 
         pruned_o: PruneOutput = self._prune_spans(
             spans, span_mask, span_embeddings, sentence_lengths, "opinion"
@@ -342,21 +343,22 @@ class ProperRelationExtractor(Model):
             label_name = self.vocab.get_token_from_index(
                 label, namespace=self._active_namespace
             )
-            res_dict[(span_1, span_2)] = label_name
-            list_entry = (
-                span_1[0],
-                span_1[1],
-                span_2[0],
-                span_2[1],
-                label_name,
-                raw_score,
-                softmax_score,
-            )
-            predictions.append(
-                document.PredictedRelation(list_entry, sentence, sentence_offsets=True)
-            )
-
-        return res_dict, predictions
+            prediction_entry = {
+                "o_span": span_1,       # (시작 인덱스, 끝 인덱스)
+                "t_span": span_2,       # (시작 인덱스, 끝 인덱스)
+                "label": label_name,
+                "score": softmax_score, # 또는 raw_score
+            }
+            predictions.append(prediction_entry)
+            
+        final_prediction_for_sentence = {
+            "sentence": sentence.get("sentence"),
+            "predicted_triples": predictions,
+        }
+        
+        # 이전 코드의 반환 타입과 맞추기 위해 2개를 반환합니다.
+        # res_dict는 더 이상 중요하지 않을 수 있습니다.
+        return res_dict, final_prediction_for_sentence
 
     # TODO: This code is repeated elsewhere. Refactor.
     @overrides

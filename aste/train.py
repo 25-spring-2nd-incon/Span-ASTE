@@ -1,7 +1,14 @@
 import sys
-sys.path.append("aste")
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+# 파이썬 모듈 검색 경로에 프로젝트 루트를 추가합니다.
+sys.path.append(str(PROJECT_ROOT))
+# --- [수정 완료] ---
 
-from wrapper import SpanModel
+# 이제 wrapper는 프로젝트 루트 기준으로 import 됩니다.
+# from wrapper import SpanModel -> from aste.wrapper import SpanModel
+from aste.wrapper import SpanModel
+# from wrapper import SpanModel
 from datetime import datetime
 
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

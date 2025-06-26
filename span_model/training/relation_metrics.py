@@ -21,7 +21,7 @@ class RelationMetrics(Metric):
         for predicted_relations, metadata in zip(
             predicted_relation_list, metadata_list
         ):
-            gold_relations = metadata.relation_dict
+            gold_relations = metadata.get("relation_dict", {})
             self._total_gold += len(gold_relations)
             self._total_predicted += len(predicted_relations)
             for (span_1, span_2), label in predicted_relations.items():
@@ -54,7 +54,7 @@ class SpanPairMetrics(RelationMetrics):
         for predicted_relations, metadata in zip(
                 predicted_relation_list, metadata_list
         ):
-            gold_relations = metadata.relation_dict
+            gold_relations = metadata.get("relation_dict", {})
             self._total_gold += len(gold_relations)
             self._total_predicted += len(predicted_relations)
             for (span_1, span_2), label in predicted_relations.items():

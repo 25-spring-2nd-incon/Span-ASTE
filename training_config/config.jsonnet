@@ -5,6 +5,7 @@
     }
   },
   "dataset_reader": {
+    "type": "span_model.data.dataset_readers.span_model.SpanModelReader",
     "max_span_width": 8,
     "token_indexers": {
       "bert": {
@@ -13,7 +14,6 @@
         "type": "pretrained_transformer_mismatched"
       }
     },
-    "type": "span_model"
   },
   "model": {
     "embedder": {
@@ -115,7 +115,7 @@
   "numpy_seed": 0,
   "pytorch_seed": 0,
   "random_seed": 0,
-  "test_data_path": "",
-  "train_data_path": "",
-  "validation_data_path": ""
+  "test_data_path": "aste/data/triplet_data/ably/jsonl/test.jsonl",
+  "train_data_path": "aste/data/triplet_data/ably/jsonl/train.jsonl",
+  "validation_data_path": "aste/data/triplet_data/ably/jsonl/dev.jsonl"
 }

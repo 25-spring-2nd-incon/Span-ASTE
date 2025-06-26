@@ -2,7 +2,7 @@ import json
 import logging
 import pickle as pkl
 import warnings
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
 
 from allennlp.common.file_utils import cached_path
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
@@ -85,7 +85,7 @@ class SpanModelReader(DatasetReader):
                 doc_json = json.loads(line)
                 yield self.text_to_instance(doc_json)
 
-    def _find_subsequence_indices(self, main_list: List, sub_list: List) -> tuple[int, int]:
+    def _find_subsequence_indices(self, main_list: List, sub_list: List) -> Tuple[int, int]:
         """헬퍼 함수: 메인 리스트에서 서브 리스트의 시작/끝 인덱스를 찾습니다."""
         main_len, sub_len = len(main_list), len(sub_list)
         if (sub_len == 0):
@@ -238,7 +238,7 @@ class SpanModelReader(DatasetReader):
         triples = doc_json.get("triples", [])
         dataset = "ably" # 네임스페이스
 
-        tokenized_words = self.tokenizer.tokenize(sentence_text)
+        tokenized_words = self._tokenizer.tokenize(sentence_text)
         text_field = TextField([Token(word) for word in tokenized_words], self._token_indexers)
         
         spans = [
@@ -252,9 +252,9 @@ class SpanModelReader(DatasetReader):
         relation_dict = {}
 
         for triple in triples:
-            aspect_text = triple["aspect_term"]
-            opinion_text = triple["opinion_term"]
-            sentiment = triple.get("sentiment") or triple.get("polarity")
+            aspect_text = triple["aspect_span"]
+            opinion_text = triple["opinion_span"]
+            sentiment = triple.get("polarity")
 
             tokenized_aspect = self._tokenizer.tokenize(aspect_text)
             tokenized_opinion = self._tokenizer.tokenize(opinion_text)
@@ -263,9 +263,9 @@ class SpanModelReader(DatasetReader):
             opinion_span = self._find_subsequence_indices(tokenized_words, tokenized_opinion)
 
             if aspect_span == (-1, -1):
-                logger.warning(f"Aspect '{aspect_text}' not found in sentence: '{sentence_text}'")
+                logger.warning(f"Target '{aspect_text}' not found in sentence: '{sentence_text}'")
             else:
-                ner_dict[aspect_span] = "ASPECT" # TARGET?
+                ner_dict[aspect_span] = "TARGET" # TARGET?
             
             if opinion_span == (-1, -1):
                 logger.warning(f"Opinion '{opinion_text}' not found in sentence: '{sentence_text}'")
@@ -298,7 +298,11 @@ class SpanModelReader(DatasetReader):
             label_namespace=f"{dataset}__relation_labels"
         )
 
-        fields["metadata"] = MetadataField(doc_json)
+        metadata_to_pass = {
+            "original_json": doc_json,
+            "relation_dict": relation_dict  # 여기서 계산한 정답 딕셔너리
+        }
+        fields["metadata"] = MetadataField(metadata_to_pass)
         return Instance(fields)
 
     @overrides

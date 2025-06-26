@@ -12,7 +12,7 @@ from allennlp.nn import util, RegularizerApplicator
 
 from span_model.models.shared import BiAffineSingleInput
 from span_model.training.ner_metrics import NERMetrics
-from span_model.data.dataset_readers import document
+# from span_model.data.dataset_readers import document
 
 logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
@@ -108,8 +108,8 @@ class NERTagger(Model):
 
         # Shape: (Batch size, Number of Spans, Span Embedding Size)
         # span_embeddings
-
-        self._active_namespace = f"{metadata.dataset}__{self._name}"
+        dataset_name = "ably"
+        self._active_namespace = f"{dataset_name}__{self._name}"
         scorer = self._ner_scorers[self._active_namespace]
         ner_scores = scorer(span_embeddings)
 
@@ -162,29 +162,22 @@ class NERTagger(Model):
             predicted_scores_softmax, _ = softmax_scores.max(dim=1)
             ix = (predicted_labels != 0) & span_mask_sent.bool()
 
-            predictions_sent = []
-            zip_pred = zip(
-                predicted_labels[ix],
-                predicted_scores_raw[ix],
-                predicted_scores_softmax[ix],
-                spans_sent[ix],
-            )
-            for label, label_score_raw, label_score_softmax, label_span in zip_pred:
+            predictions_for_sentence = []
+            
+            # 예측된 레이블이 있는 스팬들만 순회합니다.
+            spans_with_labels = spans_sent[ix]
+            labels_with_labels = predicted_labels[ix]
+            
+            for span, label_index in zip(spans_with_labels, labels_with_labels):
+                span_start, span_end = span.tolist() # [start, end]
                 label_str = self.vocab.get_token_from_index(
-                    label.item(), self._active_namespace
+                    label_index.item(), self._active_namespace
                 )
-                span_start, span_end = label_span.tolist()
-                ner = [
-                    span_start,
-                    span_end,
-                    label_str,
-                    label_score_raw.item(),
-                    label_score_softmax.item(),
-                ]
-                prediction = document.PredictedNER(ner, sentence, sentence_offsets=True)
-                predictions_sent.append(prediction)
-
-            predictions.append(predictions_sent)
+                
+                # 예측 결과를 [start, end, label] 형태의 리스트로 저장합니다.
+                predictions_for_sentence.append([span_start, span_end, label_str])
+            
+            predictions.append(predictions_for_sentence)
 
         return predictions
 
