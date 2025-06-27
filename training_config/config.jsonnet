@@ -87,7 +87,7 @@
     },
     "num_epochs": 30,
     "optimizer": {
-      "lr": 0.001,
+      "lr": 1e-4,
       "parameter_groups": [
         [
           [
@@ -104,12 +104,12 @@
             "scalar_parameters"
           ],
           {
-            "lr": 0.01
+            "lr": 1e-3
           }
         ]
       ],
       "type": "adamw",
-      "weight_decay": 0
+      "weight_decay": 0.01
     },
     "validation_metric": "+MEAN__relation_f1"
   },

@@ -27,14 +27,14 @@ model = SpanModel(save_dir="pretrained_dir", random_seed=42)
 sents = []
 pred_results = []
 
-with open("aste/sentences.csv", "r", encoding="utf-8") as f:
+with open("aste/sentences_tmp.csv", "r", encoding="utf-8") as f:
     reader = csv.reader(f)
     next(reader)
     for row in reader:
         if row:
             sents.append(row)
 
-with open("a_prediction_result.csv", "w", encoding="utf-8", newline="") as f:
+with open("a_prediction_result_tmp.csv", "w", encoding="utf-8", newline="") as f:
     writer = csv.writer(f)
     writer.writerow(["product_ID", "cleaned_sentence", "aspect_span", "opinion_span", "sentiment"])
     for sent in sents:
