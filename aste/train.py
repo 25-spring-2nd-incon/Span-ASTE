@@ -15,7 +15,7 @@ PATH_TEST = "aste/data/triplet_data/korean_sample/test.txt"
 # PATH_TRAIN = "aste/data/triplet_data/14lap/train.txt"
 # PATH_DEV = "aste/data/triplet_data/14lap/dev.txt"
 # PATH_TEST = "aste/data/triplet_data/14lap/test.txt"
-SAVE_DIR = f"outputs/sample/A_seed_{RANDOM_SEED}_{timestamp}"
+SAVE_DIR = f"outputs_A/sample/{timestamp}"
 
 
 def train_from_scratch(path_train, path_dev, save_dir):
