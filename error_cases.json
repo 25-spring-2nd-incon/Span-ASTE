@@ -1,0 +1,16 @@
+[
+  {
+    "sentence": "이런 딱. 달라붓트는. 스판재질. 긴팔. 티는 첨. 입어보믄서도. 쑥스럽지만 애플워치 하나 차믄 이쁠거 같구마이.",
+    "aspect_span": "재질",
+    "opinion_span": "딱. 달라붓트는. 스판",
+    "polarity": "NEU",
+    "error": "Span '재질' not found in tokenized sentence."
+  },
+  {
+    "sentence": "사기 전에 너무 얇다는 리뷰가 많았는데 목티가 얇아봤자 얼마나 얇겠어 하고 샀더니 진짜 얇아요 안에 흰 나시가 비치는 정도..",
+    "aspect_span": "비치는 정도",
+    "opinion_span": "흰나시가",
+    "polarity": "NEG",
+    "error": "Span '흰나시가' not found in tokenized sentence."
+  }
+]

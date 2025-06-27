@@ -5,9 +5,9 @@ from pathlib import Path
 from data_utils import Data, Sentence, SplitEnum
 from wrapper import SpanModel
 from transformers import AutoTokenizer
+import csv
 
 tokenizer = AutoTokenizer.from_pretrained("klue/bert-base")
-
 
 def predict_sentence(text: str, model: SpanModel) -> Sentence:
     path_in = "sample_input.txt"
@@ -22,18 +22,34 @@ def predict_sentence(text: str, model: SpanModel) -> Sentence:
     print("[DEBUG] dat.sentences:", data.sentences)
     return data.sentences[0]
 
-# text = "I love the shape , but the fan is too noisy ."
-# text = "Did not enjoy the new Windows 8 and touchscreen functions ."
-text = "디자인이 예쁘고 속도도 빨라요 ."
-# text = "말라보이긴 한데 좀 애매해서 살 빼고 입겟읍니덩"
-# text = "색상은 같은데, 핏이 별로예요."
-# text = "색 개다름.."
-model = SpanModel(save_dir="pretrained_dir", random_seed=0)
-sent = predict_sentence(text, model)
+model = SpanModel(save_dir="pretrained_dir", random_seed=42)
 
-print("[DEBUG] sent.triples", sent.triples)
+sents = []
+pred_results = []
 
-for t in sent.triples:
-    target = " ".join(sent.tokens[t.t_start:t.t_end+1])
-    opinion = " ".join(sent.tokens[t.o_start:t.o_end+1])
-    print(dict(target=target, opinion=opinion, sentiment=t.label))
+with open("aste/sentences.csv", "r", encoding="utf-8") as f:
+    reader = csv.reader(f)
+    next(reader)
+    for row in reader:
+        if row:
+            sents.append(row)
+
+with open("a_prediction_result.csv", "w", encoding="utf-8", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["product_ID", "cleaned_sentence", "aspect_span", "opinion_span", "sentiment"])
+    for sent in sents:
+        product_ID = sent[0]
+        cleaned_sentence = sent[1]
+
+        pred = predict_sentence(cleaned_sentence, model)
+        print("[DEBUG] pred.triples", pred.triples)
+
+        for t in pred.triples:
+            aspect_span = tokenizer.convert_tokens_to_string(pred.tokens[t.t_start:t.t_end+1])
+            opinion_span = tokenizer.convert_tokens_to_string(pred.tokens[t.o_start:t.o_end+1])
+            sentiment = t.label.value
+            print("[DEBUG]", dict(target=aspect_span, opinion=opinion_span, sentiment=sentiment))
+            if aspect_span and opinion_span and sentiment is not None:
+                writer.writerow([product_ID, cleaned_sentence, aspect_span, opinion_span, sentiment])
+
+
