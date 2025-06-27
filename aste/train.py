@@ -18,7 +18,7 @@ RANDOM_SEED = 42
 PATH_TRAIN = f"aste/data/triplet_data/ably/{dir}/train.jsonl"
 PATH_DEV = f"aste/data/triplet_data/ably/{dir}/dev.jsonl"
 PATH_TEST = f"aste/data/triplet_data/ably/{dir}/test.jsonl"
-SAVE_DIR = f"outputs/sample/seed_{RANDOM_SEED}_{timestamp}"
+SAVE_DIR = f"outputs_B/sample/{timestamp}"
 
 
 def train_from_scratch(path_train, path_dev, save_dir):
