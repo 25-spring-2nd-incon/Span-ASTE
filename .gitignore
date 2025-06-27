@@ -11,3 +11,5 @@ models/
 model_outputs/
 outputs/
 pretrained_dir/
+outputs_A/
+outputs_B/
