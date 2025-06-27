@@ -76,6 +76,7 @@
     "use_span_width_embeds": true
   },
   "trainer": {
+    "patience": 5,
     "checkpointer": {
       "num_serialized_models_to_keep": 1
     },
@@ -84,7 +85,7 @@
     "learning_rate_scheduler": {
       "type": "slanted_triangular"
     },
-    "num_epochs": 3,
+    "num_epochs": 30,
     "optimizer": {
       "lr": 0.001,
       "parameter_groups": [
