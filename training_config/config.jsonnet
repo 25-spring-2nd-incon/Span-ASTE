@@ -116,7 +116,7 @@
   "numpy_seed": 0,
   "pytorch_seed": 0,
   "random_seed": 0,
-  "test_data_path": "aste/data/triplet_data/korean_sample/test.txt",
-  "train_data_path": "aste/data/triplet_data/korean_sample/train.txt",
-  "validation_data_path": "aste/data/triplet_data/korean_sample/dev.txt"
+  "test_data_path": "aste/data/triplet_data/korean_sample/final/test.txt",
+  "train_data_path": "aste/data/triplet_data/korean_sample/final/train.txt",
+  "validation_data_path": "aste/data/triplet_data/korean_sample/final/dev.txt"
 }

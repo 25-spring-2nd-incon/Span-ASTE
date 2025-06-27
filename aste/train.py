@@ -9,9 +9,9 @@ timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 RANDOM_SEED = 42
 
-PATH_TRAIN = "aste/data/triplet_data/korean_sample/train.txt"
-PATH_DEV = "aste/data/triplet_data/korean_sample/dev.txt"
-PATH_TEST = "aste/data/triplet_data/korean_sample/test.txt"
+PATH_TRAIN = "aste/data/triplet_data/korean_sample/final/train.txt"
+PATH_DEV = "aste/data/triplet_data/korean_sample/final/dev.txt"
+PATH_TEST = "aste/data/triplet_data/korean_sample/final/test.txt"
 # PATH_TRAIN = "aste/data/triplet_data/14lap/train.txt"
 # PATH_DEV = "aste/data/triplet_data/14lap/dev.txt"
 # PATH_TEST = "aste/data/triplet_data/14lap/test.txt"

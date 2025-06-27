@@ -1,0 +1,69 @@
+{"sentence": "겉에는 보들보들한 면소재에요!", "triples": [{"aspect_span": "면소재에요", "opinion_span": "보들보들한", "polarity": "POS"}]}
+{"sentence": "맨투맨원피스처럼 여리여리하게 오버핏으로 입고싶어서 2XL로 시켰어요!", "triples": [{"aspect_span": "오버핏", "opinion_span": "여리여리하게", "polarity": "POS"}]}
+{"sentence": "저는 제트블랙컬러를 선택 하였는데 정말 블랙의 정석이자 무난한 색인 블랙 그 자체의 색이에요", "triples": [{"aspect_span": "색인", "opinion_span": "무난한", "polarity": "POS"}, {"aspect_span": "제트블랙컬러", "opinion_span": "블랙의 정석이자", "polarity": "POS"}]}
+{"sentence": "이 옷 좀 더운 감이 있긴 한데 이뻐서 괜찮아요 ..!", "triples": [{"aspect_span": "옷", "opinion_span": "더운 감이 있긴 한데", "polarity": "NEG"}, {"aspect_span": "옷", "opinion_span": "이뻐서 괜찮아요", "polarity": "POS"}]}
+{"sentence": "너무 헐렁하지도 않고 딱 이쁜 기본핏이에요", "triples": [{"aspect_span": "기본핏이에요", "opinion_span": "딱 이쁜", "polarity": "POS"}]}
+{"sentence": "근데 재질도 가격을 보면 납득이 가긴 하죠", "triples": [{"aspect_span": "가격을", "opinion_span": "납득이 가긴 하죠", "polarity": "POS"}]}
+{"sentence": "여리여리 해보이고 소재가 부드러운 재질이라 잘 느러나는데 허리를 잡아줘서 정말 맘에 들었습니다", "triples": [{"aspect_span": "소재가", "opinion_span": "부드러운 재질이라", "polarity": "POS"}]}
+{"sentence": "디자인도 특이하구 밑에 술도 맘에듭니다", "triples": [{"aspect_span": "디자인도", "opinion_span": "특이하구", "polarity": "NEU"}]}
+{"sentence": "코디하기 너무 편하고 재질? 말할것도 없습니다 너무 쫀쫀 부들부들 조아용 색 다 쟁이고싶다", "triples": [{"aspect_span": "재질", "opinion_span": "부들부들", "polarity": "POS"}]}
+{"sentence": "옷 튼튼하고 두툼하고 예쁘고 사지않을 이유가 업숨다.", "triples": [{"aspect_span": "옷", "opinion_span": "튼튼하고 두툼하고 예쁘고", "polarity": "POS"}]}
+{"sentence": "진짜 이쁘고 나같이 작은 키에 이런 오버핏 너무 맘에 든다", "triples": [{"aspect_span": "오버핏", "opinion_span": "너무 맘에 든다", "polarity": "POS"}]}
+{"sentence": "아방하고 오버핏으로 입기 좋은것 같아요오", "triples": [{"aspect_span": "오버핏으로", "opinion_span": "아방하고", "polarity": "POS"}]}
+{"sentence": "목부분은 깔끔해서 더 코디하기 좋고 적당히 널널해서 여리핏 쌉가능입니댱", "triples": [{"aspect_span": "목부분은", "opinion_span": "깔끔해서", "polarity": "POS"}, {"aspect_span": "여리핏", "opinion_span": "널널해서", "polarity": "POS"}]}
+{"sentence": "핏 진짜 날씬하게 떨어지고 길이도 길고 허리라인도 은근 잡혀있음", "triples": [{"aspect_span": "허리라인도", "opinion_span": "은근 잡혀있음", "polarity": "POS"}, {"aspect_span": "길이도", "opinion_span": "길고", "polarity": "POS"}, {"aspect_span": "핏", "opinion_span": "진짜 날씬하게 떨어지고", "polarity": "POS"}]}
+{"sentence": "보풀 소재에요.", "triples": [{"aspect_span": "보풀", "opinion_span": "소재에요.", "polarity": "NEU"}]}
+{"sentence": "천도 부드럽고 색상도 이뻐요", "triples": [{"aspect_span": "천도", "opinion_span": "부드럽고", "polarity": "POS"}, {"aspect_span": "색상도", "opinion_span": "이뻐요", "polarity": "POS"}]}
+{"sentence": "색상도 많이 누렇지 않고 딱 적당해서 까만편인 저에게도 잘 어울리네용!", "triples": [{"aspect_span": "색상도", "opinion_span": "딱 적당해서", "polarity": "POS"}]}
+{"sentence": "뒤가 포인트라 데일리면서 나름 포인트주기 좋은거같에용 굿", "triples": [{"aspect_span": "뒤가", "opinion_span": "포인트라", "polarity": "POS"}]}
+{"sentence": "생각보다 작고 스판 쭉쭉은 아님 흥", "triples": [{"aspect_span": "스판", "opinion_span": "쭉쭉은 아님", "polarity": "NEU"}]}
+{"sentence": "핏은 인정, 근데 따가워서 못입을것 같아요", "triples": [{"aspect_span": "핏은", "opinion_span": "인정", "polarity": "POS"}]}
+{"sentence": "엉덩이 거의 덮는 기장이고 오버핏까진 아니고 세미 오버핏 정도인데, 바지보단 레깅스에 더 잘 어울리는 것 같아요.", "triples": [{"aspect_span": "기장이고", "opinion_span": "엉덩이 거의 덮는", "polarity": "NEU"}, {"aspect_span": "오버핏", "opinion_span": "세미", "polarity": "NEU"}, {"aspect_span": "레깅스에", "opinion_span": "더 잘 어울리는", "polarity": "POS"}]}
+{"sentence": "사이즈 넉넉하고 무난 디자인이라 아무데나 잘 어울릴듯", "triples": [{"aspect_span": "디자인이라", "opinion_span": "아무데나 잘 어울릴듯", "polarity": "NEU"}, {"aspect_span": "사이즈", "opinion_span": "넉넉하고", "polarity": "POS"}, {"aspect_span": "디자인이라", "opinion_span": "무난", "polarity": "NEU"}]}
+{"sentence": "재질이 좀 얇긴 한데 부드러운 재질이에요", "triples": [{"aspect_span": "재질이", "opinion_span": "좀 얇긴 한데", "polarity": "NEU"}, {"aspect_span": "재질이", "opinion_span": "부드러운 재질이에요", "polarity": "POS"}]}
+{"sentence": "키가 커보이게 길이 적당히 짧은데 크롭 아니여서 좋고 포인트되게 절개 잌 고 뒤쪽에 버튼있는걸도 넘넘 귀엽고.. 사진보다도 실물이 더 이쁜것 같아요 가볍고~~~ 사계절 휘뚜루 활용도 넘넘 잘할 수 있겠어요!!", "triples": [{"aspect_span": "실물이", "opinion_span": "이쁜것 같아요", "polarity": "POS"}, {"aspect_span": "길이", "opinion_span": "크롭 아니여서 좋고", "polarity": "POS"}, {"aspect_span": "버튼있는걸도", "opinion_span": "넘넘 귀엽고", "polarity": "POS"}]}
+{"sentence": "제가 좋아하는 부드러운 재질이고 가을에 입기에 좋을만한 두께입니다 !", "triples": [{"aspect_span": "재질이고", "opinion_span": "부드러운", "polarity": "POS"}, {"aspect_span": "두께입니다", "opinion_span": "가을에 입기에 좋을만한", "polarity": "POS"}]}
+{"sentence": "또한 자수가 너무 예쁘게 박혀있어서 가격대비 너무너무 만족스러운 제품인 것 같습니다", "triples": [{"aspect_span": "자수가", "opinion_span": "너무 예쁘게 박혀있어서", "polarity": "POS"}]}
+{"sentence": "색상은 홈페이지 색과 비슷하고 면은 얇고 탄탄한 편은 아니나, 시보리가 있어서 어느정도 잡아줍니다.", "triples": [{"aspect_span": "면은", "opinion_span": "얇고", "polarity": "NEU"}, {"aspect_span": "시보리가", "opinion_span": "어느정도 잡아줍니다.", "polarity": "NEU"}, {"aspect_span": "색상은", "opinion_span": "홈페이지 색과 비슷하고", "polarity": "NEU"}, {"aspect_span": "면은", "opinion_span": "탄탄한 편은 아니나,", "polarity": "NEU"}]}
+{"sentence": "귀엽고 상큼한 크림 레몬색 브이넥인데 안에 스트레치 처리가 되어 있어서 목 늘어날 걱정 없고 크롭 기장으로 치마 입을때 안에 넣입 안해도 돼서 배가 나와 보이는 등 부해보이지 않아요", "triples": [{"aspect_span": "레몬색", "opinion_span": "귀엽고 상큼한", "polarity": "POS"}]}
+{"sentence": "소재도 시원하구 소매가 길어서 너무너무너무 좋아요!", "triples": [{"aspect_span": "소재도", "opinion_span": "시원하구", "polarity": "POS"}, {"aspect_span": "소매가", "opinion_span": "길어서 너무너무너무 좋아요", "polarity": "NEU"}]}
+{"sentence": "허리 엄펑 얇아보이고 프릴도 쉬폰 느낌이라 싼티 하나도 안나요 ..", "triples": [{"aspect_span": "허리", "opinion_span": "엄펑 얇아보이고", "polarity": "POS"}, {"aspect_span": "프릴도", "opinion_span": "쉬폰 느낌이라", "polarity": "NEU"}]}
+{"sentence": "생각보다 달라붙는 재질이라는 점 참고하시면 좋을 것 같습니당!", "triples": [{"aspect_span": "재질이라는", "opinion_span": "생각보다 달라붙는", "polarity": "NEU"}]}
+{"sentence": "M 작을 것 같아서 L샀는데도 작고 짧아요", "triples": [{"aspect_span": "L샀는데도", "opinion_span": "작고 짧아요", "polarity": "NEG"}]}
+{"sentence": "그리고 되게 잘 구겨지는 재질이에요..", "triples": [{"aspect_span": "재질이에요..", "opinion_span": "되게 잘 구겨지는", "polarity": "NEG"}]}
+{"sentence": "그리고 빨강포인트에 도트무늬가 정말 귀여워요", "triples": [{"aspect_span": "빨강포인트에 도트무늬가", "opinion_span": "정말 귀여워요", "polarity": "POS"}]}
+{"sentence": "이너로 입기 딱 좋고 시원하고 여름에 브라 안 차도 되는 게 진짜 너무 좋네요", "triples": [{"aspect_span": "재질", "opinion_span": "시원하고", "polarity": "POS"}]}
+{"sentence": "신충성도 좋고 보들후들 좋아요", "triples": [{"aspect_span": "신충성도", "opinion_span": "좋고", "polarity": "POS"}]}
+{"sentence": "니트재질이라 생각보다 입으몈 따가워요..", "triples": [{"aspect_span": "니트재질이라", "opinion_span": "따가워요..", "polarity": "NEG"}]}
+{"sentence": "근데 라지 시켰더니 너무너무 커서 교환요청하려고요!!", "triples": [{"aspect_span": "라지", "opinion_span": "너무너무 커서 교환요청하려고요!!", "polarity": "NEG"}]}
+{"sentence": "탄탄한 느낌이라 몸매 보정도 되는 느낌", "triples": [{"aspect_span": "느낌이라", "opinion_span": "탄탄한", "polarity": "POS"}, {"aspect_span": "느낌", "opinion_span": "몸매 보정도 되는", "polarity": "POS"}]}
+{"sentence": "안에는 기모원단으로 부드럽고 완전 따수워요!", "triples": [{"aspect_span": "기모원단으로", "opinion_span": "부드럽고", "polarity": "POS"},{"aspect_span": "기모원단으로", "opinion_span": "완전 따수워요!", "polarity": "POS"}]}
+{"sentence": "기모가 따로 없어서 지금 9월초에 단독으로 입기에도 괜찮은거 같아요.", "triples": [{"aspect_span": "기모가", "opinion_span": "따로 없어서", "polarity": "NEU"},{"aspect_span": "단독으로 입기에도", "opinion_span": "괜찮은 거 같아요", "polarity": "POS"}]}
+{"sentence": "전 기장이 좀 애매했어요", "triples": [{"aspect_span": "기장이", "opinion_span": "좀 애매했어요", "polarity": "NEU"}]}
+{"sentence": "디자인도 특이하구 밑에 숱도 맘에듭니다", "triples": [{"aspect_span": "숱도", "opinion_span": "맘에듭니다", "polarity": "POS"}]}
+{"sentence": "생각보다 많이 비침", "triples": [{"aspect_span": "비침", "opinion_span": "생각보다 많이", "polarity": "NEG"}]}
+{"sentence": "허리를 안 잡아줘서 핏도 좀 부해보이는 편..", "triples": [{"aspect_span": "핏도", "opinion_span": "허리를 안 잡아줘서 핏도 좀 부해보이는 편..", "polarity": "NEG"}]}
+{"sentence": "색감은 뽕따 소다색이라 예뻐요", "triples": [{"aspect_span": "색감은", "opinion_span": "뽕따 소다색이라", "polarity": "NEU"}]}
+{"sentence": "색상도 많이 누렇지 않고 딱 적당해서 까만편인 저에게도 잘 어울리네용!", "triples": [{"aspect_span": "색상도", "opinion_span": "많이 누렇지 않고", "polarity": "POS"},{"aspect_span": "색상도", "opinion_span": "딱 적당해서", "polarity": "POS"}]}
+{"sentence": "시착 후 탈의시에 정전기가 어마어마하게 납니다.", "triples": [{"aspect_span": "정전기가", "opinion_span": "어마어마하게", "polarity": "POS"}]}
+{"sentence": "부유방도 커버되면서 꽉 쪼이지 않아서 좋은 것 같습니당!!", "triples": [{"aspect_span": "부유방도", "opinion_span": "커버되면서", "polarity": "POS"}]}
+{"sentence": "가격대비 구성 미쳤움", "triples": [{"aspect_span": "가격대비 구성", "opinion_span": "미쳤움", "polarity": "POS"}]}
+{"sentence": "완전 쫀쫀하고 빈티지 스러운 색감 때문에 너무 예뻐요", "triples": [{"aspect_span": "색감", "opinion_span": "빈티지 스러운", "polarity": "NEU"}]}
+{"sentence": "M사이즈로, 저는 S-M사이즈를 주로 입는데 팔길이는 딱 맞았어요!", "triples": [{"aspect_span": "팔길이는", "opinion_span": "딱 맞았어요!", "polarity": "POS"}}
+{"sentence": "안에는 기모원단으로 부드럽고 완전 따수워요!", "triples": [{"aspect_span": "기모원단으로", "opinion_span": "부드럽고", "polarity": "NEU"},{"aspect_span": "기모원단으로", "opinion_span": "따수워요!", "polarity": "NEU"}]}
+{"sentence": "겉에는 보들보들한 면소재에요!", "triples": [{"aspect_span": "면소재에요!", "opinion_span": "보들보들한", "polarity": "NEU"}]}
+{"sentence": "크기는 생각보다 크진 않아요", "triples": [{"aspect_span": "크기는", "opinion_span": "생각보다 크진 않아요", "polarity": "NEU"}]}
+{"sentence": "맨투맨원피스처럼 여리여리하게 오버핏으로 입고싶어서 2XL로 시켰어요!", "triples": [{"aspect_span": "오버핏으로", "opinion_span": "여리여리하게", "polarity": "NEU"}]}
+{"sentence": "원단이 생각보다 그저그래요", "triples": [{"aspect_span": "원단이", "opinion_span": "생각보다 그저그래요", "polarity": "NEU"}]}
+{"sentence": "사이즈도 딱 맞고 후드 모자가 너무 귀여워요", "triples": [{"aspect_span": "사이즈도", "opinion_span": "딱 맞고", "polarity": "POS"}, {"aspect_span": "후드 모자가", "opinion_span": "너무 귀여워요", "polarity": "POS"}]}
+{"sentence": "부유방 가려주고, 배 쪽은 널널해서 뱃살도 가려주고 ..", "triples": [{"aspect_span": "부유방", "opinion_span": "가려주고,", "polarity": "POS"},{"aspect_span": "뱃살도", "opinion_span": "가려주고,", "polarity": "POS"}]}
+{"sentence": "재질도 시원하고 비침이 있긴한데 안에 나시 입어야될걱같아요.", "triples": [{"aspect_span": "비침이", "opinion_span": "있긴한데", "polarity": "NEU"}]}
+{"sentence": "배송도 빠르고 재질이 진짜 미쳤어요 쫀쫀 그 자체!!", "triples": [{"aspect_span": "배송도", "opinion_span": "빠르고", "polarity": "POS"}, {"aspect_span": "재질이", "opinion_span": "진짜 미쳤어요", "polarity": "POS"},{"aspect_span": "재질이", "opinion_span": "쫀쫀 그 자체!!", "polarity": "POS"}]}
+{"sentence": "팔뚝부각 심하고 옷이 얇고 잘늘어나는 느낌", "triples": [{"aspect_span": "팔뚝부각", "opinion_span": "심하고", "polarity": "NEG"}]}
+{"sentence": "배송 원래 배송 날짜보다 더 빨리 왔어요!", "triples": [{"aspect_span": "배송", "opinion_span": "더 빨리 왔어요!", "polarity": "POS"}]}
+{"sentence": "색상도 많이 누렇지 않고 딱 적당해서 까만편인 저에게도 잘 어울리네용!", "triples": [{"aspect_span": "색상도", "opinion_span": "많이 누렇지 않고", "polarity": "POS"}]}
+{"sentence": "오버핏이라서 아방하고 디자인 완전 취향저격이잖앙><", "triples": [{"aspect_span": "오버핏이라서", "opinion_span": "아방하고", "polarity": "NEU"}]}
+{"sentence": "사이즈 딱좋아요 느낌도 좋고 재질이랑 색감도 좋습니다!!", "triples": [{"aspect_span": "재질이랑", "opinion_span": "좋습니다!!", "polarity": "POS"}, {"aspect_span": "색감도", "opinion_span": "좋습니다!!", "polarity": "POS"}, {"aspect_span": "사이즈", "opinion_span": "딱좋아요", "polarity": "POS"}]}
+{"sentence": "소재도 시원하구 소매가 길어서 너무너무너무 좋아요!", "triples": [{"aspect_span": "소매가", "opinion_span": "너무너무너무 좋아요!", "polarity": "POS"}]}
+{"sentence": "옐로우로 사봤는데 루즈핏으로 넘 예쁘네용", "triples": [{"aspect_span": "루즈핏으로", "opinion_span": "넘 예쁘네용", "polarity": "POS"}]}
+{"sentence": "색도 부담스럽지 않은 레몬색이라 예뻐용", "triples": [{"aspect_span": "레몬색이라", "opinion_span": "예뻐용", "polarity": "POS"}]}
