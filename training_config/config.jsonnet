@@ -5,8 +5,10 @@
     }
   },
   "dataset_reader": {
+    
     "type": "span_model.data.dataset_readers.span_model.SpanModelReader",
     "max_span_width": 8,
+    "error_log_path": "errorneous_data.jsonl",
     "token_indexers": {
       "bert": {
         "max_length": 512,
@@ -43,7 +45,7 @@
     },
     "loss_weights": {
       "ner": 1.0,
-      "relation": 1
+      "relation": 20.0
     },
     "max_span_width": 8,
     "module_initializer": {
@@ -65,9 +67,9 @@
     "modules": {
       "ner": {},
       "relation": {
-        "spans_per_word": 0.5,
-        "use_distance_embeds": true,
-        "use_pruning": true
+        "spans_per_word": 1,
+        "use_distance_embeds": false,
+        "use_pruning": false
       }
     },
     "span_extractor_type": "endpoint",
@@ -76,15 +78,16 @@
     "use_span_width_embeds": true
   },
   "trainer": {
+    "patience": 5,
     "checkpointer": {
       "num_serialized_models_to_keep": 1
     },
-    "cuda_device": -1,
+    "cuda_device": 0,
     "grad_norm": 5,
     "learning_rate_scheduler": {
       "type": "slanted_triangular"
     },
-    "num_epochs": 5,
+    "num_epochs": 30,
     "optimizer": {
       "lr": 0.001,
       "parameter_groups": [

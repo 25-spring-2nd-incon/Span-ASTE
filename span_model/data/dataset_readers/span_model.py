@@ -24,6 +24,9 @@ from span_model.data.dataset_readers.document import Document, Sentence
 
 from transformers import AutoTokenizer
 
+from pathlib import Path # 파일 경로를 다루기 위해 추가
+
+
 logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
 
@@ -49,6 +52,7 @@ class SpanModelReader(DatasetReader):
         max_span_width: int,
         token_indexers: Dict[str, TokenIndexer] = None,
         tokenizer_name: str = "klue/bert-base", # config 파일로부터 전달 
+        error_log_path: str = None, 
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
@@ -61,11 +65,25 @@ class SpanModelReader(DatasetReader):
         self._token_indexers = token_indexers or {"tokens": SingleIdTokenIndexer()}
 
         # tokenizer (Single Source of Truth)        
-        self._tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+        self._tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, use_fast=True)
+        # --- [핵심 수정 2] 오류 로그 파일 핸들러 설정 ---
 
+        # self._error_log_file = None
+        # if error_log_path:
+        #     # 파일이 쓰일 디렉토리가 없으면 생성합니다.
+        #     Path(error_log_path).parent.mkdir(parents=True, exist_ok=True)
+        #     # 파일을 추가(append) 모드로 엽니다.
+        #     self._error_log_file = open(error_log_path, "a", encoding="utf-8")
+        # --- [수정 완료] ---
+
+    # --- [핵심 수정 3] 클래스가 소멸될 때 파일을 안전하게 닫도록 합니다. ---
+    # def __del__(self):
+    #     if self._error_log_file:
+    #         self._error_log_file.close()
+    # --- [수정 완료] ---
 
     @overrides
-    def _read(self, file_path: str):
+    def _read(self, file_path: str):    
         """
         .jsonl 파일을 한 줄씩 읽어서 json 객체로 파싱하고, text_to_instance로 넘깁니다.
         """
@@ -215,77 +233,74 @@ class SpanModelReader(DatasetReader):
 
     @overrides
     def text_to_instance(self, doc_json: Dict[str, Any]) -> Instance:
-        # """
-        # Convert a Document object into an instance.
-        # """
-        # doc = Document.from_json(doc_text)
-
-        # # Make sure there are no single-token sentences; these break things.
-        # sent_lengths = [len(x) for x in doc.sentences]
-        # if min(sent_lengths) < 2:
-        #     msg = (
-        #         f"Document {doc.doc_key} has a sentence with a single token or no tokens. "
-        #         "This may break the modeling code."
-        #     )
-        #     warnings.warn(msg)
-
-        # fields = self._process_sentence_fields(doc)
-        # fields["metadata"] = MetadataField(doc)
-
-        # return Instance(fields)
-
         sentence_text = doc_json["sentence"]
         triples = doc_json.get("triples", [])
-        dataset = "ably" # 네임스페이스
+        dataset = "ably"
 
-        tokenized_words = self._tokenizer.tokenize(sentence_text)
-        text_field = TextField([Token(word) for word in tokenized_words], self._token_indexers)
+        tokenization_output = self._tokenizer(
+            sentence_text,
+            return_offsets_mapping=True,
+            add_special_tokens=False
+        )
         
+
+        token_strings = self._tokenizer.convert_ids_to_tokens(tokenization_output["input_ids"])
+        char_offsets = tokenization_output["offset_mapping"]
+
+        tokens = [Token(text) for text in token_strings]
+        text_field = TextField(tokens, self._token_indexers)
+
         spans = [
             SpanField(start, end, text_field)
-            for start, end in enumerate_spans(tokenized_words, max_span_width=self._max_span_width)
-            ]
+            for start, end in enumerate_spans(token_strings, max_span_width=self._max_span_width)
+        ]
         span_field = ListField(spans)
         span_tuples = [(span.span_start, span.span_end) for span in spans]
-
+        
         ner_dict = {}
         relation_dict = {}
 
         for triple in triples:
             aspect_text = triple["aspect_span"]
             opinion_text = triple["opinion_span"]
-            sentiment = triple.get("polarity")
+            sentiment = triple.get("sentiment") or triple.get("polarity")
 
-            tokenized_aspect = self._tokenizer.tokenize(aspect_text)
-            tokenized_opinion = self._tokenizer.tokenize(opinion_text)
-            
-            aspect_span = self._find_subsequence_indices(tokenized_words, tokenized_aspect)
-            opinion_span = self._find_subsequence_indices(tokenized_words, tokenized_opinion)
-
-            if aspect_span == (-1, -1):
-                logger.warning(f"Target '{aspect_text}' not found in sentence: '{sentence_text}'")
-            else:
-                ner_dict[aspect_span] = "TARGET" # TARGET?
-            
-            if opinion_span == (-1, -1):
-                logger.warning(f"Opinion '{opinion_text}' not found in sentence: '{sentence_text}'")
-            else:
-                ner_dict[opinion_span] = "OPINION"
-            
-            if aspect_span != (-1, -1) and opinion_span != (-1, -1):
+            try:
+                a_char_start = sentence_text.find(aspect_text)
+                if a_char_start == -1: raise ValueError(f"Aspect '{aspect_text}'")
+                a_char_end = a_char_start + len(aspect_text)
                 
-                key_tuple = (opinion_span, aspect_span) # <-- 순서를 (opinion, aspect)로 변경
-                relation_dict[key_tuple] = sentiment
-                
-                # 디버깅을 위한 출력
-                if len(relation_dict) == 1: # 너무 많이 출력되지 않게 첫 번째 triplet만 출력
-                    print(f"[DEBUG READER] Gold Relation Key: {key_tuple} (opinion, target)")
-                # --- [디버깅 코드 종료] ---
+                o_char_start = sentence_text.find(opinion_text)
+                if o_char_start == -1: raise ValueError(f"Opinion '{opinion_text}'")
+                o_char_end = o_char_start + len(opinion_text)
+            except ValueError as e:
+                logger.warning(f"Span text {e} not found in sentence: '{sentence_text}'")
+                continue
 
-                relation_dict[(aspect_span, opinion_span)] = sentiment
+            aspect_token_indices = []
+            opinion_token_indices = []
+            
+            for i, (token_char_start, token_char_end) in enumerate(char_offsets):
+                
+                if token_char_start >= a_char_start and token_char_end <= a_char_end:
+                    aspect_token_indices.append(i)
+
+                if token_char_start >= o_char_start and token_char_end <= o_char_end:
+                    opinion_token_indices.append(i)
+
+            if not aspect_token_indices or not opinion_token_indices:
+                logger.warning(f"Could not map char span to token span. Triple: {triple}, Sentence: {sentence_text}")
+                continue
+
+            # 변환된 토큰 인덱스로 최종 스팬 튜플 생성
+            aspect_span = (aspect_token_indices[0], aspect_token_indices[-1])
+            opinion_span = (opinion_token_indices[0], opinion_token_indices[-1])
+            
+            ner_dict[aspect_span] = "TARGET"
+            ner_dict[opinion_span] = "OPINION"
+            relation_dict[(opinion_span, aspect_span)] = sentiment
         
         fields = {"text": text_field, "spans": span_field}
-
         ner_labels = [""] * len(span_tuples)
         for span, label in ner_dict.items():
             if span in span_tuples:
@@ -301,17 +316,16 @@ class SpanModelReader(DatasetReader):
                 relation_indices.append((ix1, ix2))
                 relation_labels.append(label)
         fields["relation_labels"] = AdjacencyField(
-            indices=relation_indices,
-            sequence_field=span_field,
-            labels=relation_labels,
-            label_namespace=f"{dataset}__relation_labels"
+            indices=relation_indices, sequence_field=span_field,
+            labels=relation_labels, label_namespace=f"{dataset}__relation_labels"
         )
-
+        
         metadata_to_pass = {
             "original_json": doc_json,
-            "relation_dict": relation_dict  # 여기서 계산한 정답 딕셔너리
+            "relation_dict": relation_dict
         }
         fields["metadata"] = MetadataField(metadata_to_pass)
+        
         return Instance(fields)
 
     @overrides

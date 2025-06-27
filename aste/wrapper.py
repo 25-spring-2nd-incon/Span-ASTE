@@ -10,6 +10,8 @@ from allennlp.commands.predict import _predict, Predict
 from allennlp.commands.train import train_model_from_file
 from allennlp.common import Params
 from allennlp.common.util import import_module_and_submodules
+from allennlp.predictors.predictor import Predictor
+
 
 from fire import Fire
 from pydantic import BaseModel
@@ -164,11 +166,18 @@ class SpanModel(BaseModel):
             raise FileNotFoundError(f"모델 아카이브 파일을 찾을 수 없습니다: {archive_file}")
         print(f"'{archive_file}' 모델을 사용하여 예측을 수행합니다.")
         import_module_and_submodules("span_model")
-        predictor = Predict.from_archive(archive=archive_file, predictor_name="span_model")
-        manager = predictor._manager
-        with open(path_out, "w", encoding="utf-8") as f_out:
-            json_iterator = manager.get_file_iterator(path_in, False)
-            for result in predictor.predict_iterator(json_iterator):
+        predictor = Predictor.from_path(
+            archive_path=str(archive_file),
+            predictor_name="span_model"  # 이 이름은 predictors/span_model.py에 등록된 이름과 일치해야 합니다.
+        )
+        
+        # 입력 파일을 한 줄씩 읽고 예측하여 출력 파일에 씁니다.
+        with open(path_in, 'r', encoding='utf-8') as f_in, \
+             open(path_out, 'w', encoding='utf-8') as f_out:
+            
+            for line in f_in:
+                json_data = json.loads(line)
+                result = predictor.predict_json(json_data)
                 f_out.write(json.dumps(result, ensure_ascii=False) + '\n')
         print(f"예측 완료. 결과가 '{path_out}'에 저장되었습니다.")
 

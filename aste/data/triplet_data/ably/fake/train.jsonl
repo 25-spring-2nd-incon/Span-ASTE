@@ -1,0 +1,498 @@
+{"sentence": "어깨은 부해보여요", "triples": [{"aspect_span": "어깨", "opinion_span": "부해보여요", "polarity": "NEG"}]}
+{"sentence": "소매은 거칠어요", "triples": [{"aspect_span": "소매", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "기모은 적당해요", "triples": [{"aspect_span": "기모", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "배송은 깔끔해요", "triples": [{"aspect_span": "배송", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "허리은 맘에 들어요", "triples": [{"aspect_span": "허리", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "어깨은 보통이에요", "triples": [{"aspect_span": "어깨", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "디자인은 괜찮아요", "triples": [{"aspect_span": "디자인", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "핏은 실망스러워요", "triples": [{"aspect_span": "핏", "opinion_span": "실망스러워요", "polarity": "NEG"}]}
+{"sentence": "길이은 그냥 그래요", "triples": [{"aspect_span": "길이", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "소재은 그럭저럭이에요", "triples": [{"aspect_span": "소재", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "사이즈은 거칠어요", "triples": [{"aspect_span": "사이즈", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "기모은 따가워요", "triples": [{"aspect_span": "기모", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 보통이에요", "triples": [{"aspect_span": "프린팅", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "길이은 편해요", "triples": [{"aspect_span": "길이", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "품은 불편해요", "triples": [{"aspect_span": "품", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "기모은 무난합니다", "triples": [{"aspect_span": "기모", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "사이즈은 완벽해요", "triples": [{"aspect_span": "사이즈", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "가격은 완벽해요", "triples": [{"aspect_span": "가격", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "디자인은 별로예요", "triples": [{"aspect_span": "디자인", "opinion_span": "별로예요", "polarity": "NEG"}]}
+{"sentence": "길이은 예뻐요", "triples": [{"aspect_span": "길이", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "목 부분은 무난합니다", "triples": [{"aspect_span": "목 부분", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "배송은 따뜻해요", "triples": [{"aspect_span": "배송", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "기모은 예뻐요", "triples": [{"aspect_span": "기모", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "길이은 거칠어요", "triples": [{"aspect_span": "길이", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "품은 예뻐요", "triples": [{"aspect_span": "품", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "소매은 괜찮아요", "triples": [{"aspect_span": "소매", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "디자인은 예뻐요", "triples": [{"aspect_span": "디자인", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "소재은 별로예요", "triples": [{"aspect_span": "소재", "opinion_span": "별로예요", "polarity": "NEG"}]}
+{"sentence": "디자인은 적당해요", "triples": [{"aspect_span": "디자인", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "가격은 비추예요", "triples": [{"aspect_span": "가격", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "핏은 그냥 그래요", "triples": [{"aspect_span": "핏", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "소매은 평범해요", "triples": [{"aspect_span": "소매", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "디자인은 적당해요", "triples": [{"aspect_span": "디자인", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "길이은 예뻐요", "triples": [{"aspect_span": "길이", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "소매은 안예뻐요", "triples": [{"aspect_span": "소매", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 보통입니다", "triples": [{"aspect_span": "사이즈", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "허리은 좋아요", "triples": [{"aspect_span": "허리", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "배송은 보통입니다", "triples": [{"aspect_span": "배송", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "프린팅은 무난해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "품은 비추예요", "triples": [{"aspect_span": "품", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "허리은 괜찮아요", "triples": [{"aspect_span": "허리", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "사이즈은 적당해요", "triples": [{"aspect_span": "사이즈", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "배송은 좋아요", "triples": [{"aspect_span": "배송", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "색상은 평범해요", "triples": [{"aspect_span": "색상", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 탄탄해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "재질은 따뜻해요", "triples": [{"aspect_span": "재질", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "색상은 그냥 그래요", "triples": [{"aspect_span": "색상", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "허리은 무난해요", "triples": [{"aspect_span": "허리", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "소재은 보통이에요", "triples": [{"aspect_span": "소재", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "배송은 보통이에요", "triples": [{"aspect_span": "배송", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "품은 거칠어요", "triples": [{"aspect_span": "품", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 훌륭해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "훌륭해요", "polarity": "POS"}]}
+{"sentence": "어깨은 거칠어요", "triples": [{"aspect_span": "어깨", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 보통이에요", "triples": [{"aspect_span": "프린팅", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "핏은 그럭저럭이에요", "triples": [{"aspect_span": "핏", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "배송은 그냥 그래요", "triples": [{"aspect_span": "배송", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "핏은 적당해요", "triples": [{"aspect_span": "핏", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 커요", "triples": [{"aspect_span": "목 부분", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "색상은 좁아요", "triples": [{"aspect_span": "색상", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "핏은 그냥저냥이에요", "triples": [{"aspect_span": "핏", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "소재은 탄탄해요", "triples": [{"aspect_span": "소재", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "프린팅은 불편해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "길이은 무난해요", "triples": [{"aspect_span": "길이", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "디자인은 보통이에요", "triples": [{"aspect_span": "디자인", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "디자인은 훌륭해요", "triples": [{"aspect_span": "디자인", "opinion_span": "훌륭해요", "polarity": "POS"}]}
+{"sentence": "기모은 완벽해요", "triples": [{"aspect_span": "기모", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "사이즈은 아쉬워요", "triples": [{"aspect_span": "사이즈", "opinion_span": "아쉬워요", "polarity": "NEG"}]}
+{"sentence": "가격은 예뻐요", "triples": [{"aspect_span": "가격", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "품은 안예뻐요", "triples": [{"aspect_span": "품", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "소매은 비추예요", "triples": [{"aspect_span": "소매", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "핏은 무난합니다", "triples": [{"aspect_span": "핏", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "어깨은 무난해요", "triples": [{"aspect_span": "어깨", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "배송은 무난합니다", "triples": [{"aspect_span": "배송", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "소매은 완벽해요", "triples": [{"aspect_span": "소매", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "핏은 좋아요", "triples": [{"aspect_span": "핏", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "길이은 아쉬워요", "triples": [{"aspect_span": "길이", "opinion_span": "아쉬워요", "polarity": "NEG"}]}
+{"sentence": "길이은 평범해요", "triples": [{"aspect_span": "길이", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "길이은 귀여워요", "triples": [{"aspect_span": "길이", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "핏은 별로예요", "triples": [{"aspect_span": "핏", "opinion_span": "별로예요", "polarity": "NEG"}]}
+{"sentence": "소재은 싸구려 같아요", "triples": [{"aspect_span": "소재", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "소매은 괜찮아요", "triples": [{"aspect_span": "소매", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 예뻐요", "triples": [{"aspect_span": "목 부분", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "디자인은 좋아요", "triples": [{"aspect_span": "디자인", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "허리은 보통입니다", "triples": [{"aspect_span": "허리", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "어깨은 예뻐요", "triples": [{"aspect_span": "어깨", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "허리은 괜찮아요", "triples": [{"aspect_span": "허리", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "기모은 편해요", "triples": [{"aspect_span": "기모", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "품은 편해요", "triples": [{"aspect_span": "품", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "어깨은 평범해요", "triples": [{"aspect_span": "어깨", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "품은 별로예요", "triples": [{"aspect_span": "품", "opinion_span": "별로예요", "polarity": "NEG"}]}
+{"sentence": "소재은 그냥 그래요", "triples": [{"aspect_span": "소재", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "디자인은 좋아요", "triples": [{"aspect_span": "디자인", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "소매은 탄탄해요", "triples": [{"aspect_span": "소매", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "목 부분은 보통입니다", "triples": [{"aspect_span": "목 부분", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "품은 보통이에요", "triples": [{"aspect_span": "품", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "프린팅은 안예뻐요", "triples": [{"aspect_span": "프린팅", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "어깨은 귀여워요", "triples": [{"aspect_span": "어깨", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "기모은 안예뻐요", "triples": [{"aspect_span": "기모", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 불편해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "색상은 좁아요", "triples": [{"aspect_span": "색상", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "핏은 비추예요", "triples": [{"aspect_span": "핏", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "목 부분은 무난합니다", "triples": [{"aspect_span": "목 부분", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "어깨은 그냥저냥이에요", "triples": [{"aspect_span": "어깨", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "소재은 보통이에요", "triples": [{"aspect_span": "소재", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "프린팅은 그냥저냥이에요", "triples": [{"aspect_span": "프린팅", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "품은 그럭저럭이에요", "triples": [{"aspect_span": "품", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 맘에 들어요", "triples": [{"aspect_span": "목 부분", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "재질은 괜찮아요", "triples": [{"aspect_span": "재질", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "품은 좁아요", "triples": [{"aspect_span": "품", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "어깨은 안예뻐요", "triples": [{"aspect_span": "어깨", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "소재은 그럭저럭이에요", "triples": [{"aspect_span": "소재", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "허리은 그럭저럭이에요", "triples": [{"aspect_span": "허리", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "핏은 깔끔해요", "triples": [{"aspect_span": "핏", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "소매은 보통이에요", "triples": [{"aspect_span": "소매", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "길이은 커요", "triples": [{"aspect_span": "길이", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "색상은 그럭저럭이에요", "triples": [{"aspect_span": "색상", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "길이은 깔끔해요", "triples": [{"aspect_span": "길이", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "가격은 커요", "triples": [{"aspect_span": "가격", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "품은 괜찮아요", "triples": [{"aspect_span": "품", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "가격은 훌륭해요", "triples": [{"aspect_span": "가격", "opinion_span": "훌륭해요", "polarity": "POS"}]}
+{"sentence": "배송은 고급스러워요", "triples": [{"aspect_span": "배송", "opinion_span": "고급스러워요", "polarity": "POS"}]}
+{"sentence": "허리은 괜찮아요", "triples": [{"aspect_span": "허리", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 부해보여요", "triples": [{"aspect_span": "목 부분", "opinion_span": "부해보여요", "polarity": "NEG"}]}
+{"sentence": "가격은 완벽해요", "triples": [{"aspect_span": "가격", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "소매은 아쉬워요", "triples": [{"aspect_span": "소매", "opinion_span": "아쉬워요", "polarity": "NEG"}]}
+{"sentence": "길이은 그냥저냥이에요", "triples": [{"aspect_span": "길이", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "재질은 평범해요", "triples": [{"aspect_span": "재질", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "핏은 안예뻐요", "triples": [{"aspect_span": "핏", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "기모은 적당해요", "triples": [{"aspect_span": "기모", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "길이은 맘에 들어요", "triples": [{"aspect_span": "길이", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "소매은 보통입니다", "triples": [{"aspect_span": "소매", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "품은 그냥 그래요", "triples": [{"aspect_span": "품", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "핏은 무난해요", "triples": [{"aspect_span": "핏", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 그냥저냥이에요", "triples": [{"aspect_span": "목 부분", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "핏은 싸구려 같아요", "triples": [{"aspect_span": "핏", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "핏은 무난합니다", "triples": [{"aspect_span": "핏", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "색상은 무난해요", "triples": [{"aspect_span": "색상", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "소재은 적당해요", "triples": [{"aspect_span": "소재", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "재질은 무난합니다", "triples": [{"aspect_span": "재질", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "재질은 괜찮아요", "triples": [{"aspect_span": "재질", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "색상은 무난해요", "triples": [{"aspect_span": "색상", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "길이은 괜찮아요", "triples": [{"aspect_span": "길이", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "품은 편해요", "triples": [{"aspect_span": "품", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "배송은 보통입니다", "triples": [{"aspect_span": "배송", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "핏은 그럭저럭이에요", "triples": [{"aspect_span": "핏", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "핏은 부해보여요", "triples": [{"aspect_span": "핏", "opinion_span": "부해보여요", "polarity": "NEG"}]}
+{"sentence": "핏은 따가워요", "triples": [{"aspect_span": "핏", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "소재은 커요", "triples": [{"aspect_span": "소재", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 편해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "목 부분은 예뻐요", "triples": [{"aspect_span": "목 부분", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "가격은 별로예요", "triples": [{"aspect_span": "가격", "opinion_span": "별로예요", "polarity": "NEG"}]}
+{"sentence": "목 부분은 따뜻해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "색상은 완벽해요", "triples": [{"aspect_span": "색상", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "디자인은 부드러워요", "triples": [{"aspect_span": "디자인", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "길이은 그냥 그래요", "triples": [{"aspect_span": "길이", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "사이즈은 깔끔해요", "triples": [{"aspect_span": "사이즈", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "가격은 보통이에요", "triples": [{"aspect_span": "가격", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "소재은 괜찮아요", "triples": [{"aspect_span": "소재", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 불편해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "품은 커요", "triples": [{"aspect_span": "품", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "품은 탄탄해요", "triples": [{"aspect_span": "품", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "어깨은 고급스러워요", "triples": [{"aspect_span": "어깨", "opinion_span": "고급스러워요", "polarity": "POS"}]}
+{"sentence": "프린팅은 부드러워요", "triples": [{"aspect_span": "프린팅", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "색상은 부드러워요", "triples": [{"aspect_span": "색상", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "길이은 아쉬워요", "triples": [{"aspect_span": "길이", "opinion_span": "아쉬워요", "polarity": "NEG"}]}
+{"sentence": "품은 깔끔해요", "triples": [{"aspect_span": "품", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "배송은 귀여워요", "triples": [{"aspect_span": "배송", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "재질은 보통입니다", "triples": [{"aspect_span": "재질", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "소재은 아쉬워요", "triples": [{"aspect_span": "소재", "opinion_span": "아쉬워요", "polarity": "NEG"}]}
+{"sentence": "핏은 그럭저럭이에요", "triples": [{"aspect_span": "핏", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 편해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "배송은 거칠어요", "triples": [{"aspect_span": "배송", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "허리은 부드러워요", "triples": [{"aspect_span": "허리", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "프린팅은 무난해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "허리은 훌륭해요", "triples": [{"aspect_span": "허리", "opinion_span": "훌륭해요", "polarity": "POS"}]}
+{"sentence": "품은 커요", "triples": [{"aspect_span": "품", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "목 부분은 부해보여요", "triples": [{"aspect_span": "목 부분", "opinion_span": "부해보여요", "polarity": "NEG"}]}
+{"sentence": "길이은 완벽해요", "triples": [{"aspect_span": "길이", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "사이즈은 좁아요", "triples": [{"aspect_span": "사이즈", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 괜찮아요", "triples": [{"aspect_span": "사이즈", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "어깨은 편해요", "triples": [{"aspect_span": "어깨", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "목 부분은 비추예요", "triples": [{"aspect_span": "목 부분", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "색상은 보통입니다", "triples": [{"aspect_span": "색상", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "프린팅은 귀여워요", "triples": [{"aspect_span": "프린팅", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "가격은 따가워요", "triples": [{"aspect_span": "가격", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "기모은 보통이에요", "triples": [{"aspect_span": "기모", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "기모은 보통입니다", "triples": [{"aspect_span": "기모", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "목 부분은 그냥저냥이에요", "triples": [{"aspect_span": "목 부분", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "재질은 탄탄해요", "triples": [{"aspect_span": "재질", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "색상은 적당해요", "triples": [{"aspect_span": "색상", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "허리은 따뜻해요", "triples": [{"aspect_span": "허리", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "소재은 안예뻐요", "triples": [{"aspect_span": "소재", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 부해보여요", "triples": [{"aspect_span": "프린팅", "opinion_span": "부해보여요", "polarity": "NEG"}]}
+{"sentence": "길이은 보통이에요", "triples": [{"aspect_span": "길이", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "소매은 귀여워요", "triples": [{"aspect_span": "소매", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "소재은 싸구려 같아요", "triples": [{"aspect_span": "소재", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 완벽해요", "triples": [{"aspect_span": "사이즈", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "소재은 부해보여요", "triples": [{"aspect_span": "소재", "opinion_span": "부해보여요", "polarity": "NEG"}]}
+{"sentence": "목 부분은 완벽해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "어깨은 귀여워요", "triples": [{"aspect_span": "어깨", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "기모은 거칠어요", "triples": [{"aspect_span": "기모", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 보통입니다", "triples": [{"aspect_span": "프린팅", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "어깨은 괜찮아요", "triples": [{"aspect_span": "어깨", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "어깨은 예뻐요", "triples": [{"aspect_span": "어깨", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "소재은 보통입니다", "triples": [{"aspect_span": "소재", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "프린팅은 고급스러워요", "triples": [{"aspect_span": "프린팅", "opinion_span": "고급스러워요", "polarity": "POS"}]}
+{"sentence": "재질은 따가워요", "triples": [{"aspect_span": "재질", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "기모은 좁아요", "triples": [{"aspect_span": "기모", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "기모은 보통이에요", "triples": [{"aspect_span": "기모", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "어깨은 안예뻐요", "triples": [{"aspect_span": "어깨", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 커요", "triples": [{"aspect_span": "사이즈", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "품은 훌륭해요", "triples": [{"aspect_span": "품", "opinion_span": "훌륭해요", "polarity": "POS"}]}
+{"sentence": "재질은 거칠어요", "triples": [{"aspect_span": "재질", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 예뻐요", "triples": [{"aspect_span": "사이즈", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "색상은 훌륭해요", "triples": [{"aspect_span": "색상", "opinion_span": "훌륭해요", "polarity": "POS"}]}
+{"sentence": "배송은 부드러워요", "triples": [{"aspect_span": "배송", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "목 부분은 무난해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "허리은 좋아요", "triples": [{"aspect_span": "허리", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "디자인은 보통이에요", "triples": [{"aspect_span": "디자인", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 따뜻해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "사이즈은 예뻐요", "triples": [{"aspect_span": "사이즈", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "프린팅은 그냥 그래요", "triples": [{"aspect_span": "프린팅", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "재질은 맘에 들어요", "triples": [{"aspect_span": "재질", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "프린팅은 맘에 들어요", "triples": [{"aspect_span": "프린팅", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "어깨은 따뜻해요", "triples": [{"aspect_span": "어깨", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "기모은 보통입니다", "triples": [{"aspect_span": "기모", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "가격은 적당해요", "triples": [{"aspect_span": "가격", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "색상은 편해요", "triples": [{"aspect_span": "색상", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "목 부분은 부드러워요", "triples": [{"aspect_span": "목 부분", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "프린팅은 별로예요", "triples": [{"aspect_span": "프린팅", "opinion_span": "별로예요", "polarity": "NEG"}]}
+{"sentence": "허리은 따가워요", "triples": [{"aspect_span": "허리", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "배송은 무난해요", "triples": [{"aspect_span": "배송", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "재질은 맘에 들어요", "triples": [{"aspect_span": "재질", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "어깨은 무난합니다", "triples": [{"aspect_span": "어깨", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "색상은 안예뻐요", "triples": [{"aspect_span": "색상", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "어깨은 따뜻해요", "triples": [{"aspect_span": "어깨", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "색상은 비추예요", "triples": [{"aspect_span": "색상", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "재질은 적당해요", "triples": [{"aspect_span": "재질", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 좁아요", "triples": [{"aspect_span": "목 부분", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 아쉬워요", "triples": [{"aspect_span": "프린팅", "opinion_span": "아쉬워요", "polarity": "NEG"}]}
+{"sentence": "가격은 보통이에요", "triples": [{"aspect_span": "가격", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "어깨은 그냥 그래요", "triples": [{"aspect_span": "어깨", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "기모은 보통입니다", "triples": [{"aspect_span": "기모", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "배송은 싸구려 같아요", "triples": [{"aspect_span": "배송", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "기모은 따뜻해요", "triples": [{"aspect_span": "기모", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "기모은 깔끔해요", "triples": [{"aspect_span": "기모", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "소매은 귀여워요", "triples": [{"aspect_span": "소매", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "허리은 싸구려 같아요", "triples": [{"aspect_span": "허리", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "기모은 따뜻해요", "triples": [{"aspect_span": "기모", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "어깨은 훌륭해요", "triples": [{"aspect_span": "어깨", "opinion_span": "훌륭해요", "polarity": "POS"}]}
+{"sentence": "기모은 편해요", "triples": [{"aspect_span": "기모", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "어깨은 그냥저냥이에요", "triples": [{"aspect_span": "어깨", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "재질은 부드러워요", "triples": [{"aspect_span": "재질", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "가격은 불편해요", "triples": [{"aspect_span": "가격", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "길이은 따뜻해요", "triples": [{"aspect_span": "길이", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "어깨은 따뜻해요", "triples": [{"aspect_span": "어깨", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "어깨은 훌륭해요", "triples": [{"aspect_span": "어깨", "opinion_span": "훌륭해요", "polarity": "POS"}]}
+{"sentence": "품은 불편해요", "triples": [{"aspect_span": "품", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "기모은 완벽해요", "triples": [{"aspect_span": "기모", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "품은 평범해요", "triples": [{"aspect_span": "품", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "핏은 귀여워요", "triples": [{"aspect_span": "핏", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "목 부분은 완벽해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "소재은 보통이에요", "triples": [{"aspect_span": "소재", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "가격은 따가워요", "triples": [{"aspect_span": "가격", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 그냥저냥이에요", "triples": [{"aspect_span": "사이즈", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "가격은 편해요", "triples": [{"aspect_span": "가격", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "재질은 귀여워요", "triples": [{"aspect_span": "재질", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "목 부분은 보통입니다", "triples": [{"aspect_span": "목 부분", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "가격은 비추예요", "triples": [{"aspect_span": "가격", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "소재은 그럭저럭이에요", "triples": [{"aspect_span": "소재", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "사이즈은 맘에 들어요", "triples": [{"aspect_span": "사이즈", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "배송은 안예뻐요", "triples": [{"aspect_span": "배송", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "핏은 적당해요", "triples": [{"aspect_span": "핏", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "디자인은 탄탄해요", "triples": [{"aspect_span": "디자인", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "어깨은 평범해요", "triples": [{"aspect_span": "어깨", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "소매은 싸구려 같아요", "triples": [{"aspect_span": "소매", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "배송은 그냥 그래요", "triples": [{"aspect_span": "배송", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "허리은 평범해요", "triples": [{"aspect_span": "허리", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "핏은 평범해요", "triples": [{"aspect_span": "핏", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "디자인은 안예뻐요", "triples": [{"aspect_span": "디자인", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 안예뻐요", "triples": [{"aspect_span": "프린팅", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "어깨은 맘에 들어요", "triples": [{"aspect_span": "어깨", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "핏은 커요", "triples": [{"aspect_span": "핏", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "색상은 안예뻐요", "triples": [{"aspect_span": "색상", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "색상은 적당해요", "triples": [{"aspect_span": "색상", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "프린팅은 무난합니다", "triples": [{"aspect_span": "프린팅", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "사이즈은 안예뻐요", "triples": [{"aspect_span": "사이즈", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "소재은 따뜻해요", "triples": [{"aspect_span": "소재", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "프린팅은 편해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "길이은 편해요", "triples": [{"aspect_span": "길이", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "사이즈은 예뻐요", "triples": [{"aspect_span": "사이즈", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "핏은 예뻐요", "triples": [{"aspect_span": "핏", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "가격은 불편해요", "triples": [{"aspect_span": "가격", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "길이은 무난해요", "triples": [{"aspect_span": "길이", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "핏은 좋아요", "triples": [{"aspect_span": "핏", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "기모은 불편해요", "triples": [{"aspect_span": "기모", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "배송은 좋아요", "triples": [{"aspect_span": "배송", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "소매은 적당해요", "triples": [{"aspect_span": "소매", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "색상은 좋아요", "triples": [{"aspect_span": "색상", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "색상은 편해요", "triples": [{"aspect_span": "색상", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "품은 편해요", "triples": [{"aspect_span": "품", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "디자인은 실망스러워요", "triples": [{"aspect_span": "디자인", "opinion_span": "실망스러워요", "polarity": "NEG"}]}
+{"sentence": "허리은 탄탄해요", "triples": [{"aspect_span": "허리", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "디자인은 탄탄해요", "triples": [{"aspect_span": "디자인", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "소재은 보통입니다", "triples": [{"aspect_span": "소재", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "소매은 그럭저럭이에요", "triples": [{"aspect_span": "소매", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "프린팅은 그냥 그래요", "triples": [{"aspect_span": "프린팅", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "색상은 좁아요", "triples": [{"aspect_span": "색상", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "소재은 탄탄해요", "triples": [{"aspect_span": "소재", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "목 부분은 실망스러워요", "triples": [{"aspect_span": "목 부분", "opinion_span": "실망스러워요", "polarity": "NEG"}]}
+{"sentence": "재질은 보통입니다", "triples": [{"aspect_span": "재질", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "기모은 싸구려 같아요", "triples": [{"aspect_span": "기모", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "어깨은 무난해요", "triples": [{"aspect_span": "어깨", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "배송은 귀여워요", "triples": [{"aspect_span": "배송", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "배송은 따가워요", "triples": [{"aspect_span": "배송", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "색상은 안예뻐요", "triples": [{"aspect_span": "색상", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "가격은 적당해요", "triples": [{"aspect_span": "가격", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "가격은 부드러워요", "triples": [{"aspect_span": "가격", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "재질은 맘에 들어요", "triples": [{"aspect_span": "재질", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "목 부분은 적당해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "가격은 불편해요", "triples": [{"aspect_span": "가격", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "가격은 부드러워요", "triples": [{"aspect_span": "가격", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "길이은 비추예요", "triples": [{"aspect_span": "길이", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "소매은 좋아요", "triples": [{"aspect_span": "소매", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "소재은 무난합니다", "triples": [{"aspect_span": "소재", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "디자인은 커요", "triples": [{"aspect_span": "디자인", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "핏은 깔끔해요", "triples": [{"aspect_span": "핏", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "프린팅은 싸구려 같아요", "triples": [{"aspect_span": "프린팅", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "품은 그냥저냥이에요", "triples": [{"aspect_span": "품", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "핏은 따뜻해요", "triples": [{"aspect_span": "핏", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "소매은 비추예요", "triples": [{"aspect_span": "소매", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 그냥 그래요", "triples": [{"aspect_span": "사이즈", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "어깨은 괜찮아요", "triples": [{"aspect_span": "어깨", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "가격은 무난합니다", "triples": [{"aspect_span": "가격", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "길이은 고급스러워요", "triples": [{"aspect_span": "길이", "opinion_span": "고급스러워요", "polarity": "POS"}]}
+{"sentence": "프린팅은 커요", "triples": [{"aspect_span": "프린팅", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "길이은 부드러워요", "triples": [{"aspect_span": "길이", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "소매은 완벽해요", "triples": [{"aspect_span": "소매", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "재질은 커요", "triples": [{"aspect_span": "재질", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "소재은 따가워요", "triples": [{"aspect_span": "소재", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "기모은 그럭저럭이에요", "triples": [{"aspect_span": "기모", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "프린팅은 적당해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "어깨은 보통입니다", "triples": [{"aspect_span": "어깨", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "허리은 무난합니다", "triples": [{"aspect_span": "허리", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "프린팅은 싸구려 같아요", "triples": [{"aspect_span": "프린팅", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "소매은 불편해요", "triples": [{"aspect_span": "소매", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "목 부분은 좋아요", "triples": [{"aspect_span": "목 부분", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "기모은 괜찮아요", "triples": [{"aspect_span": "기모", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "기모은 예뻐요", "triples": [{"aspect_span": "기모", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "핏은 괜찮아요", "triples": [{"aspect_span": "핏", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "품은 그냥 그래요", "triples": [{"aspect_span": "품", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "디자인은 그냥저냥이에요", "triples": [{"aspect_span": "디자인", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "프린팅은 탄탄해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "허리은 적당해요", "triples": [{"aspect_span": "허리", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "길이은 부드러워요", "triples": [{"aspect_span": "길이", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "길이은 안예뻐요", "triples": [{"aspect_span": "길이", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "재질은 커요", "triples": [{"aspect_span": "재질", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "길이은 부드러워요", "triples": [{"aspect_span": "길이", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "사이즈은 안예뻐요", "triples": [{"aspect_span": "사이즈", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "허리은 별로예요", "triples": [{"aspect_span": "허리", "opinion_span": "별로예요", "polarity": "NEG"}]}
+{"sentence": "소재은 평범해요", "triples": [{"aspect_span": "소재", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "배송은 예뻐요", "triples": [{"aspect_span": "배송", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "프린팅은 부드러워요", "triples": [{"aspect_span": "프린팅", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "허리은 실망스러워요", "triples": [{"aspect_span": "허리", "opinion_span": "실망스러워요", "polarity": "NEG"}]}
+{"sentence": "품은 싸구려 같아요", "triples": [{"aspect_span": "품", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "길이은 싸구려 같아요", "triples": [{"aspect_span": "길이", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 괜찮아요", "triples": [{"aspect_span": "프린팅", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "길이은 그냥 그래요", "triples": [{"aspect_span": "길이", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "사이즈은 보통이에요", "triples": [{"aspect_span": "사이즈", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "프린팅은 적당해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "배송은 고급스러워요", "triples": [{"aspect_span": "배송", "opinion_span": "고급스러워요", "polarity": "POS"}]}
+{"sentence": "가격은 좋아요", "triples": [{"aspect_span": "가격", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "배송은 완벽해요", "triples": [{"aspect_span": "배송", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "소재은 탄탄해요", "triples": [{"aspect_span": "소재", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "허리은 편해요", "triples": [{"aspect_span": "허리", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "디자인은 좁아요", "triples": [{"aspect_span": "디자인", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "길이은 부해보여요", "triples": [{"aspect_span": "길이", "opinion_span": "부해보여요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 괜찮아요", "triples": [{"aspect_span": "프린팅", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "기모은 맘에 들어요", "triples": [{"aspect_span": "기모", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "핏은 좋아요", "triples": [{"aspect_span": "핏", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "프린팅은 훌륭해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "훌륭해요", "polarity": "POS"}]}
+{"sentence": "배송은 보통이에요", "triples": [{"aspect_span": "배송", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "기모은 그럭저럭이에요", "triples": [{"aspect_span": "기모", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "어깨은 무난해요", "triples": [{"aspect_span": "어깨", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "핏은 편해요", "triples": [{"aspect_span": "핏", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "소재은 깔끔해요", "triples": [{"aspect_span": "소재", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "기모은 고급스러워요", "triples": [{"aspect_span": "기모", "opinion_span": "고급스러워요", "polarity": "POS"}]}
+{"sentence": "길이은 편해요", "triples": [{"aspect_span": "길이", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "기모은 귀여워요", "triples": [{"aspect_span": "기모", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "가격은 평범해요", "triples": [{"aspect_span": "가격", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "소매은 무난해요", "triples": [{"aspect_span": "소매", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "품은 좋아요", "triples": [{"aspect_span": "품", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "배송은 보통입니다", "triples": [{"aspect_span": "배송", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "목 부분은 무난합니다", "triples": [{"aspect_span": "목 부분", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "핏은 탄탄해요", "triples": [{"aspect_span": "핏", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "프린팅은 따가워요", "triples": [{"aspect_span": "프린팅", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "허리은 그럭저럭이에요", "triples": [{"aspect_span": "허리", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "가격은 실망스러워요", "triples": [{"aspect_span": "가격", "opinion_span": "실망스러워요", "polarity": "NEG"}]}
+{"sentence": "품은 보통입니다", "triples": [{"aspect_span": "품", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "가격은 비추예요", "triples": [{"aspect_span": "가격", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "색상은 편해요", "triples": [{"aspect_span": "색상", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "품은 따뜻해요", "triples": [{"aspect_span": "품", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "허리은 비추예요", "triples": [{"aspect_span": "허리", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "길이은 따가워요", "triples": [{"aspect_span": "길이", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "소재은 예뻐요", "triples": [{"aspect_span": "소재", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "목 부분은 탄탄해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "소재은 편해요", "triples": [{"aspect_span": "소재", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "가격은 따뜻해요", "triples": [{"aspect_span": "가격", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "소매은 그냥저냥이에요", "triples": [{"aspect_span": "소매", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "길이은 실망스러워요", "triples": [{"aspect_span": "길이", "opinion_span": "실망스러워요", "polarity": "NEG"}]}
+{"sentence": "목 부분은 탄탄해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "길이은 예뻐요", "triples": [{"aspect_span": "길이", "opinion_span": "예뻐요", "polarity": "POS"}]}
+{"sentence": "색상은 깔끔해요", "triples": [{"aspect_span": "색상", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "허리은 부해보여요", "triples": [{"aspect_span": "허리", "opinion_span": "부해보여요", "polarity": "NEG"}]}
+{"sentence": "소재은 불편해요", "triples": [{"aspect_span": "소재", "opinion_span": "불편해요", "polarity": "NEG"}]}
+{"sentence": "허리은 그냥 그래요", "triples": [{"aspect_span": "허리", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "소매은 고급스러워요", "triples": [{"aspect_span": "소매", "opinion_span": "고급스러워요", "polarity": "POS"}]}
+{"sentence": "프린팅은 평범해요", "triples": [{"aspect_span": "프린팅", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "소재은 좋아요", "triples": [{"aspect_span": "소재", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "핏은 완벽해요", "triples": [{"aspect_span": "핏", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "소매은 귀여워요", "triples": [{"aspect_span": "소매", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "배송은 평범해요", "triples": [{"aspect_span": "배송", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "품은 귀여워요", "triples": [{"aspect_span": "품", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "목 부분은 부드러워요", "triples": [{"aspect_span": "목 부분", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "기모은 평범해요", "triples": [{"aspect_span": "기모", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "기모은 무난해요", "triples": [{"aspect_span": "기모", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "핏은 적당해요", "triples": [{"aspect_span": "핏", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "가격은 보통입니다", "triples": [{"aspect_span": "가격", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "어깨은 비추예요", "triples": [{"aspect_span": "어깨", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 맘에 들어요", "triples": [{"aspect_span": "사이즈", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "소매은 보통이에요", "triples": [{"aspect_span": "소매", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "재질은 편해요", "triples": [{"aspect_span": "재질", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "재질은 비추예요", "triples": [{"aspect_span": "재질", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "소매은 편해요", "triples": [{"aspect_span": "소매", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "허리은 좋아요", "triples": [{"aspect_span": "허리", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "소매은 좋아요", "triples": [{"aspect_span": "소매", "opinion_span": "좋아요", "polarity": "POS"}]}
+{"sentence": "소재은 비추예요", "triples": [{"aspect_span": "소재", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "기모은 아쉬워요", "triples": [{"aspect_span": "기모", "opinion_span": "아쉬워요", "polarity": "NEG"}]}
+{"sentence": "길이은 완벽해요", "triples": [{"aspect_span": "길이", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "색상은 편해요", "triples": [{"aspect_span": "색상", "opinion_span": "편해요", "polarity": "POS"}]}
+{"sentence": "사이즈은 보통입니다", "triples": [{"aspect_span": "사이즈", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "가격은 깔끔해요", "triples": [{"aspect_span": "가격", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "재질은 좁아요", "triples": [{"aspect_span": "재질", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "소재은 따가워요", "triples": [{"aspect_span": "소재", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "길이은 안예뻐요", "triples": [{"aspect_span": "길이", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "기모은 따뜻해요", "triples": [{"aspect_span": "기모", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "사이즈은 괜찮아요", "triples": [{"aspect_span": "사이즈", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "가격은 무난합니다", "triples": [{"aspect_span": "가격", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "허리은 실망스러워요", "triples": [{"aspect_span": "허리", "opinion_span": "실망스러워요", "polarity": "NEG"}]}
+{"sentence": "어깨은 그냥 그래요", "triples": [{"aspect_span": "어깨", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "허리은 탄탄해요", "triples": [{"aspect_span": "허리", "opinion_span": "탄탄해요", "polarity": "POS"}]}
+{"sentence": "색상은 그럭저럭이에요", "triples": [{"aspect_span": "색상", "opinion_span": "그럭저럭이에요", "polarity": "NEU"}]}
+{"sentence": "허리은 비추예요", "triples": [{"aspect_span": "허리", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "품은 커요", "triples": [{"aspect_span": "품", "opinion_span": "커요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 귀여워요", "triples": [{"aspect_span": "프린팅", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "길이은 그냥저냥이에요", "triples": [{"aspect_span": "길이", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "품은 실망스러워요", "triples": [{"aspect_span": "품", "opinion_span": "실망스러워요", "polarity": "NEG"}]}
+{"sentence": "프린팅은 비추예요", "triples": [{"aspect_span": "프린팅", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "소재은 적당해요", "triples": [{"aspect_span": "소재", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "배송은 완벽해요", "triples": [{"aspect_span": "배송", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "디자인은 거칠어요", "triples": [{"aspect_span": "디자인", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "가격은 부해보여요", "triples": [{"aspect_span": "가격", "opinion_span": "부해보여요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 보통이에요", "triples": [{"aspect_span": "사이즈", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "기모은 싸구려 같아요", "triples": [{"aspect_span": "기모", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 보통입니다", "triples": [{"aspect_span": "사이즈", "opinion_span": "보통입니다", "polarity": "NEU"}]}
+{"sentence": "어깨은 맘에 들어요", "triples": [{"aspect_span": "어깨", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "기모은 평범해요", "triples": [{"aspect_span": "기모", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "길이은 귀여워요", "triples": [{"aspect_span": "길이", "opinion_span": "귀여워요", "polarity": "POS"}]}
+{"sentence": "배송은 별로예요", "triples": [{"aspect_span": "배송", "opinion_span": "별로예요", "polarity": "NEG"}]}
+{"sentence": "가격은 그냥 그래요", "triples": [{"aspect_span": "가격", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "프린팅은 거칠어요", "triples": [{"aspect_span": "프린팅", "opinion_span": "거칠어요", "polarity": "NEG"}]}
+{"sentence": "디자인은 그냥 그래요", "triples": [{"aspect_span": "디자인", "opinion_span": "그냥 그래요", "polarity": "NEU"}]}
+{"sentence": "품은 맘에 들어요", "triples": [{"aspect_span": "품", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "목 부분은 따가워요", "triples": [{"aspect_span": "목 부분", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "품은 무난합니다", "triples": [{"aspect_span": "품", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "가격은 따가워요", "triples": [{"aspect_span": "가격", "opinion_span": "따가워요", "polarity": "NEG"}]}
+{"sentence": "핏은 평범해요", "triples": [{"aspect_span": "핏", "opinion_span": "평범해요", "polarity": "NEU"}]}
+{"sentence": "소재은 싸구려 같아요", "triples": [{"aspect_span": "소재", "opinion_span": "싸구려 같아요", "polarity": "NEG"}]}
+{"sentence": "소재은 맘에 들어요", "triples": [{"aspect_span": "소재", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "소재은 별로예요", "triples": [{"aspect_span": "소재", "opinion_span": "별로예요", "polarity": "NEG"}]}
+{"sentence": "배송은 깔끔해요", "triples": [{"aspect_span": "배송", "opinion_span": "깔끔해요", "polarity": "POS"}]}
+{"sentence": "품은 보통이에요", "triples": [{"aspect_span": "품", "opinion_span": "보통이에요", "polarity": "NEU"}]}
+{"sentence": "품은 고급스러워요", "triples": [{"aspect_span": "품", "opinion_span": "고급스러워요", "polarity": "POS"}]}
+{"sentence": "핏은 비추예요", "triples": [{"aspect_span": "핏", "opinion_span": "비추예요", "polarity": "NEG"}]}
+{"sentence": "사이즈은 괜찮아요", "triples": [{"aspect_span": "사이즈", "opinion_span": "괜찮아요", "polarity": "NEU"}]}
+{"sentence": "사이즈은 적당해요", "triples": [{"aspect_span": "사이즈", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "사이즈은 따뜻해요", "triples": [{"aspect_span": "사이즈", "opinion_span": "따뜻해요", "polarity": "POS"}]}
+{"sentence": "목 부분은 부드러워요", "triples": [{"aspect_span": "목 부분", "opinion_span": "부드러워요", "polarity": "POS"}]}
+{"sentence": "디자인은 그냥저냥이에요", "triples": [{"aspect_span": "디자인", "opinion_span": "그냥저냥이에요", "polarity": "NEU"}]}
+{"sentence": "허리은 안예뻐요", "triples": [{"aspect_span": "허리", "opinion_span": "안예뻐요", "polarity": "NEG"}]}
+{"sentence": "허리은 무난해요", "triples": [{"aspect_span": "허리", "opinion_span": "무난해요", "polarity": "NEU"}]}
+{"sentence": "어깨은 무난합니다", "triples": [{"aspect_span": "어깨", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "품은 좁아요", "triples": [{"aspect_span": "품", "opinion_span": "좁아요", "polarity": "NEG"}]}
+{"sentence": "길이은 무난합니다", "triples": [{"aspect_span": "길이", "opinion_span": "무난합니다", "polarity": "NEU"}]}
+{"sentence": "가격은 맘에 들어요", "triples": [{"aspect_span": "가격", "opinion_span": "맘에 들어요", "polarity": "POS"}]}
+{"sentence": "어깨은 적당해요", "triples": [{"aspect_span": "어깨", "opinion_span": "적당해요", "polarity": "NEU"}]}
+{"sentence": "목 부분은 완벽해요", "triples": [{"aspect_span": "목 부분", "opinion_span": "완벽해요", "polarity": "POS"}]}
+{"sentence": "어깨은 아쉬워요", "triples": [{"aspect_span": "어깨", "opinion_span": "아쉬워요", "polarity": "NEG"}]}

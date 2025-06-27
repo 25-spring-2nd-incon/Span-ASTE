@@ -13,11 +13,11 @@ from datetime import datetime
 
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-
+dir = "jsonl" # jsonl or fake
 RANDOM_SEED = 42
-PATH_TRAIN = "aste/data/triplet_data/ably/jsonl/train.jsonl"
-PATH_DEV = "aste/data/triplet_data/ably/jsonl/dev.jsonl"
-PATH_TEST = "aste/data/triplet_data/ably/jsonl/test.jsonl"
+PATH_TRAIN = f"aste/data/triplet_data/ably/{dir}/train.jsonl"
+PATH_DEV = f"aste/data/triplet_data/ably/{dir}/dev.jsonl"
+PATH_TEST = f"aste/data/triplet_data/ably/{dir}/test.jsonl"
 SAVE_DIR = f"outputs/sample/seed_{RANDOM_SEED}_{timestamp}"
 
 

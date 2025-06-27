@@ -201,60 +201,43 @@ class SpanModel(Model):
         # -------------------- [핵심 수정 종료] --------------------
 
         # New: 두 종류의 임베딩 생성 (기존 로직 유지)
-        text_embeds_b = text_embeddings
-        kwargs = dict(spans=spans)
-        span_embeddings = self.text_to_span_embeds(text_embeddings, **kwargs)
-        span_embeds_b = self.text_to_span_embeds(text_embeds_b, **kwargs)
-
-        # 하위 모듈 호출
-        output_ner = {"loss": 0}
-        output_relation = {"loss": 0}
-
-        if self._loss_weights["ner"] > 0:
-            output_ner = self._ner(
-                spans,
-                span_mask,
-                span_embeddings,
-                sentence_lengths,
-                ner_labels,
-                metadata,
-            )
-            ner_scores = output_ner.pop("ner_scores")
+        # 4. 스팬 임베딩 추출
+        # (batch_size, num_spans, span_embedding_dim)
+        span_embeddings = self._endpoint_span_extractor(text_embeddings, spans)
         
-        if self._loss_weights["relation"] > 0:
-            if getattr(self._relation, "use_ner_scores_for_prune", False):
-                self._relation._ner_scores = ner_scores
-            self._relation._opinion_scores = output_ner["opinion_scores"]
-            self._relation._target_scores = output_ner["target_scores"]
-            self._relation._text_mask = text_mask
-            self._relation._text_embeds = text_embeddings
-            if getattr(self._relation, "use_span_loss_for_pruners", False):
-                self._relation._ner_labels = ner_labels
-            output_relation = self._relation(
-                spans,
-                span_mask,
-                span_embeds_b,
-                sentence_lengths,
-                relation_labels,
-                metadata,
-            )
+        # 5. NER 모듈 호출
+        # 이 모듈은 loss, predictions, 그리고 relation 모듈이 사용할 점수들을 반환합니다.
+        output_ner = self._ner(
+            spans, span_mask, span_embeddings, sentence_lengths, ner_labels, metadata
+        )
+        
+        # 6. Relation 모듈 호출
+        # Relation 모듈에 필요한 정보를 명시적으로 전달합니다.
+        self._relation._opinion_scores = output_ner.get("opinion_scores")
+        self._relation._target_scores = output_ner.get("target_scores")
+        
+        output_relation = self._relation(
+            spans,
+            span_mask,
+            span_embeddings, # NER과 동일한 스팬 임베딩을 사용합니다.
+            sentence_lengths,
+            relation_labels,
+            metadata,
+        )
 
-        # 손실 계산
+        # 7. 손실 계산
         loss = (
-            self._loss_weights["ner"] * output_ner.get("loss", 0) +
-            self._loss_weights["relation"] * output_relation.get("loss", 0)
+            self._loss_weights["ner"] * output_ner.get("loss", 0)
+            + self._loss_weights["relation"] * output_relation.get("loss", 0)
         )
         
-        # weight 처리는 일단 단순화하거나, metadata 구조 확인 후 적용
-        if metadata and metadata[0].get("weight") is not None:
-            loss *= metadata[0].get("weight")
-
-        output_dict = dict(
-            relation=output_relation,
-            ner=output_ner,
-            loss=loss,
-            metadata=metadata,
-        )
+        # 8. 최종 출력 딕셔너리 구성
+        output_dict = {
+            "ner": output_ner,
+            "relation": output_relation,
+            "loss": loss,
+            "metadata": metadata, # metadata를 그대로 전달하여 다음 단계에서 사용
+        }
 
         return output_dict
 
@@ -306,45 +289,42 @@ class SpanModel(Model):
     #     return doc
     # span_model.py 의 SpanModel 클래스 내부
 
+    # span_model.py의 SpanModel 클래스 내부
+
+    # span_model.py의 SpanModel 클래스 내부
+
     @overrides
     def make_output_human_readable(self, output_dict: Dict[str, torch.Tensor]) -> Dict[str, Any]:
         """
         모델의 예측 결과를 사람이 읽기 쉬운 딕셔너리 형태로 변환합니다.
-        레거시 document 객체 대신 파이썬 기본 자료형을 사용하도록 수정된 버전.
+        어떤 경우에도 항상 딕셔너리를 반환하도록 보장하는 최종 버전.
         """
-        # metadata는 이미 human-readable한 dict의 리스트입니다.
-        # 예측 결과를 이 metadata 리스트의 각 딕셔너리에 추가합니다.
-        batch_metadata = output_dict["metadata"]
-        
-        # NER 예측 결과 추가
-        if "predictions" in output_dict.get("ner", {}):
-            for i, ner_preds in enumerate(output_dict["ner"]["predictions"]):
-                # 배치 크기를 벗어나는 경우를 방지
-                if i < len(batch_metadata):
-                    batch_metadata[i]["predicted_ner"] = ner_preds
+        # 1. 최종적으로 반환할 기본 딕셔너리 구조를 먼저 만듭니다.
+        #    metadata에서 원본 문장 정보를 가져옵니다.
+        #    배치 내 첫 번째 인스턴스의 metadata를 사용합니다.
+        metadata_item = output_dict["metadata"][0]
+        # 우리가 SpanModelReader에서 저장한 `original_json`을 사용합니다.
+        original_json = metadata_item.get("original_json", {})
+        final_output = {
+            "sentence": original_json.get("sentence", "Sentence not found."),
+            "predicted_ner": [],
+            "predicted_triples": []
+        }
 
-        # Relation 예측 결과 추가
-        if "predictions" in output_dict.get("relation", {}):
-            for i, rel_preds in enumerate(output_dict["relation"]["predictions"]):
-                if i < len(batch_metadata):
-                    # 예측 결과에서 triplet 정보를 재구성하여 추가할 수 있습니다.
-                    # 예를 들어, relation 모듈의 예측 결과가 [o_start, o_end, t_start, t_end, sentiment] 라면...
-                    predicted_triples = []
-                    for p in rel_preds:
-                        # 이 부분은 relation 모듈의 실제 출력 형식에 따라 수정해야 합니다.
-                        # 여기서는 p가 [o_start, o_end, t_start, t_end, sentiment] 라고 가정합니다.
-                        predicted_triples.append({
-                            "opinion_indices": [p[0], p[1]],
-                            "target_indices": [p[2], p[3]],
-                            "sentiment": p[4]
-                        })
-                    batch_metadata[i]["predicted_relations"] = predicted_triples
-        
-        # AllenNLP의 predict 커맨드는 이 딕셔너리(또는 딕셔너리의 리스트)를
-        # json.dumps하여 파일에 한 줄씩 씁니다.
-        # 배치 크기가 1일 때와 아닐 때를 모두 처리하기 위해,
-        # 배치 전체를 리스트로 반환하는 것이 가장 안전합니다.
-        return batch_metadata
+        # 2. NER 예측 결과가 있다면, 최종 출력에 추가합니다.
+        ner_predictions = output_dict.get("ner", {}).get("predictions")
+        if ner_predictions and isinstance(ner_predictions, list):
+            # ner_predictions는 [[...], [...]] 형태의 리스트이므로 첫 번째 항목을 사용
+            final_output["predicted_ner"] = ner_predictions[0]
+
+        # 3. Relation 예측 결과가 있다면, 최종 출력에 추가합니다.
+        relation_predictions = output_dict.get("relation", {}).get("predictions")
+        if relation_predictions and isinstance(relation_predictions, list):
+            # relation_predictions는 [{'sentence':..., 'predicted_triples':...}] 형태의 리스트
+            # 여기서 'predicted_triples'만 가져와서 덮어씁니다.
+            final_output["predicted_triples"] = relation_predictions[0].get("predicted_triples", [])
+
+        return final_output
 
     def get_metrics(self, reset: bool = False) -> Dict[str, float]:
         """

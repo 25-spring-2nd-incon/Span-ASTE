@@ -349,8 +349,8 @@ class ProperRelationExtractor(Model):
             res_dict[key_tuple] = label_name
             
             # 디버깅을 위한 출력
-            if len(res_dict) == 1:
-                 print(f"[DEBUG PREDICT] Predicted Relation Key: {key_tuple} (opinion, target)")
+            #if len(res_dict) == 1:
+            #    print(f"[DEBUG PREDICT] Predicted Relation Key: {key_tuple} (opinion, target)")
             # --- [디버깅 코드 종료] ---
             
             prediction_entry = {
