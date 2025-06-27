@@ -45,7 +45,7 @@
     },
     "loss_weights": {
       "ner": 1.0,
-      "relation": 20.0
+      "relation": 1.0
     },
     "max_span_width": 8,
     "module_initializer": {
@@ -67,9 +67,9 @@
     "modules": {
       "ner": {},
       "relation": {
-        "spans_per_word": 1,
-        "use_distance_embeds": false,
-        "use_pruning": false
+        "spans_per_word": 0.5,
+        "use_distance_embeds": true,
+        "use_pruning": true
       }
     },
     "span_extractor_type": "endpoint",
