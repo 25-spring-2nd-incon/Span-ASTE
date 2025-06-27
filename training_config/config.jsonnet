@@ -79,7 +79,7 @@
     "checkpointer": {
       "num_serialized_models_to_keep": 1
     },
-    "cuda_device": -1,
+    "cuda_device": 0,
     "grad_norm": 5,
     "learning_rate_scheduler": {
       "type": "slanted_triangular"
