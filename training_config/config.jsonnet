@@ -1,122 +1,122 @@
 {
-  "data_loader": {
-    "sampler": {
-      "type": "random"
-    }
-  },
-  "dataset_reader": {
-    "max_span_width": 8,
-    "token_indexers": {
-      "bert": {
-        "max_length": 512,
-        "model_name": "klue/bert-base",
-        "type": "pretrained_transformer_mismatched"
-      }
-    },
-    "type": "span_model"
-  },
-  "model": {
-    "embedder": {
-      "token_embedders": {
-        "bert": {
-          "max_length": 512,
-          "model_name": "klue/bert-base",
-          "type": "pretrained_transformer_mismatched"
+    "dataset_reader": {
+        "type": "span_model",
+        "max_span_width": 8,
+        "token_indexers": {
+            "bert": {
+                "type": "pretrained_transformer_mismatched",
+                "max_length": 512,
+                "model_name": "klue/bert-base"
+            }
         }
-      }
     },
-    "feature_size": 20,
-    "feedforward_params": {
-      "dropout": 0.4,
-      "hidden_dims": 150,
-      "num_layers": 2
+    "model": {
+        "type": "span_model",
+        "embedder": {
+            "token_embedders": {
+                "bert": {
+                    "type": "pretrained_transformer_mismatched",
+                    "max_length": 512,
+                    "model_name": "klue/bert-base"
+                }
+            }
+        },
+        "feature_size": 20,
+        "feedforward_params": {
+            "dropout": 0.4,
+            "hidden_dims": 150,
+            "num_layers": 2
+        },
+        "initializer": {
+            "regexes": [
+                [
+                    "_span_width_embedding.weight",
+                    {
+                        "type": "xavier_normal"
+                    }
+                ]
+            ]
+        },
+        "loss_weights": {
+            "ner": 1,
+            "relation": 1
+        },
+        "max_span_width": 8,
+        "module_initializer": {
+            "regexes": [
+                [
+                    ".*weight",
+                    {
+                        "type": "xavier_normal"
+                    }
+                ],
+                [
+                    ".*weight_matrix",
+                    {
+                        "type": "xavier_normal"
+                    }
+                ]
+            ]
+        },
+        "modules": {
+            "ner": {},
+            "relation": {
+                "spans_per_word": 0.5,
+                "use_distance_embeds": true,
+                "use_pruning": true
+            }
+        },
+        "span_extractor_type": "endpoint",
+        "target_task": "relation",
+        "use_span_width_embeds": true
     },
-    "initializer": {
-      "regexes": [
-        [
-          "_span_width_embedding.weight",
-          {
-            "type": "xavier_normal"
-          }
-        ]
-      ]
+    "train_data_path": "C:\\Users\\0730b\\Documents\\Dev\\Projects\\Span-ASTE\\outputs_A\\sample\\20250627_193828\\temp_data\\train.json",
+    "validation_data_path": "C:\\Users\\0730b\\Documents\\Dev\\Projects\\Span-ASTE\\outputs_A\\sample\\20250627_193828\\temp_data\\dev.json",
+    "test_data_path": "C:\\Users\\0730b\\Documents\\Dev\\Projects\\Span-ASTE\\outputs_A\\sample\\20250627_193828\\temp_data\\dev.json",
+    "trainer": {
+        "checkpointer": {
+            "num_serialized_models_to_keep": 1
+        },
+        "cuda_device": 0,
+        "grad_norm": 5,
+        "learning_rate_scheduler": {
+            "type": "slanted_triangular"
+        },
+        "num_epochs": 30,
+        "optimizer": {
+            "type": "adamw",
+            "lr": 0.001,
+            "parameter_groups": [
+                [
+                    [
+                        "_matched_embedder"
+                    ],
+                    {
+                        "finetune": true,
+                        "lr": 5e-05,
+                        "weight_decay": 0.01
+                    }
+                ],
+                [
+                    [
+                        "scalar_parameters"
+                    ],
+                    {
+                        "lr": 0.01
+                    }
+                ]
+            ],
+            "weight_decay": 0
+        },
+        "patience": 5,
+        "validation_metric": "+MEAN__relation_f1"
     },
-    "loss_weights": {
-      "ner": 1.0,
-      "relation": 1
+    "data_loader": {
+        "sampler": {
+            "type": "random"
+        }
     },
-    "max_span_width": 8,
-    "module_initializer": {
-      "regexes": [
-        [
-          ".*weight",
-          {
-            "type": "xavier_normal"
-          }
-        ],
-        [
-          ".*weight_matrix",
-          {
-            "type": "xavier_normal"
-          }
-        ]
-      ]
-    },
-    "modules": {
-      "ner": {},
-      "relation": {
-        "spans_per_word": 0.5,
-        "use_distance_embeds": true,
-        "use_pruning": true
-      }
-    },
-    "span_extractor_type": "endpoint",
-    "target_task": "relation",
-    "type": "span_model",
-    "use_span_width_embeds": true
-  },
-  "trainer": {
-    "patience": 5,
-    "checkpointer": {
-      "num_serialized_models_to_keep": 1
-    },
-    "cuda_device": 0,
-    "grad_norm": 5,
-    "learning_rate_scheduler": {
-      "type": "slanted_triangular"
-    },
-    "num_epochs": 30,
-    "optimizer": {
-      "lr": 1e-4,
-      "parameter_groups": [
-        [
-          [
-            "_matched_embedder"
-          ],
-          {
-            "finetune": true,
-            "lr": 5e-05,
-            "weight_decay": 0.01
-          }
-        ],
-        [
-          [
-            "scalar_parameters"
-          ],
-          {
-            "lr": 1e-3
-          }
-        ]
-      ],
-      "type": "adamw",
-      "weight_decay": 0.01
-    },
-    "validation_metric": "+MEAN__relation_f1"
-  },
-  "numpy_seed": 0,
-  "pytorch_seed": 0,
-  "random_seed": 0,
-  "test_data_path": "aste/data/triplet_data/korean_sample/final/test.txt",
-  "train_data_path": "aste/data/triplet_data/korean_sample/final/train.txt",
-  "validation_data_path": "aste/data/triplet_data/korean_sample/final/dev.txt"
+    "numpy_seed": 42,
+    "pytorch_seed": 42,
+    "random_seed": 42
 }
