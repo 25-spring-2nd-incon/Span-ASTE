@@ -1,3 +1,11 @@
+## Notice (by ba2slk)
+본 레포지토리는 원본 [chiayewken/Span-ASTE](https://github.com/chiayewken/Span-ASTE) 모델을 포크하여 한국어 리뷰 데이터에 맞게 커스터마이징한 버전입니다. 의류 쇼핑몰 'ABLY'의 상품 리뷰와 같이, 한국어로 작성된 리뷰에서 (Aspect, Opinion, Sentiment) 삼중 항을 추출하는 데 목적을 두고 있습니다.
+---
+## 주요 수정 사항
+- 토크나이저를 `bert-base-uncased` -> `klue/bert-base'로 교체하여 한국어 처리 지원
+- kor-training 브랜치: 슬라이딩 윈도우 방식으로 토큰 인덱스가 라벨링된 훈련 데이터를 사용하는 버전
+- fix/SpanModel 브랜치: `span_model/data/dataset_readers/span_model.py` 내부에서 offset_mapping을 활용하여 원본 문장의 문자 인덱스를 기준으로 토큰 인덱스를 매핑하도록 변경. 그에 영향을 받는 코드 다수 변경
+---
 ## Span-ASTE: Learning Span-Level Interactions for Aspect Sentiment Triplet Extraction
 
 **\*\*\*\*\* New August 30th, 2022: Featured on YouTube video by Xiaoqing Wan [![YT](https://img.shields.io/youtube/views/rRTvsuGRnJ0?style=social)](https://www.youtube.com/watch?v=rRTvsuGRnJ0) \*\*\*\*\***
@@ -114,3 +122,4 @@ If the code is useful for your research project, we appreciate if you cite the f
     abstract = "Aspect Sentiment Triplet Extraction (ASTE) is the most recent subtask of ABSA which outputs triplets of an aspect target, its associated sentiment, and the corresponding opinion term. Recent models perform the triplet extraction in an end-to-end manner but heavily rely on the interactions between each target word and opinion word. Thereby, they cannot perform well on targets and opinions which contain multiple words. Our proposed span-level approach explicitly considers the interaction between the whole spans of targets and opinions when predicting their sentiment relation. Thus, it can make predictions with the semantics of whole spans, ensuring better sentiment consistency. To ease the high computational cost caused by span enumeration, we propose a dual-channel span pruning strategy by incorporating supervision from the Aspect Term Extraction (ATE) and Opinion Term Extraction (OTE) tasks. This strategy not only improves computational efficiency but also distinguishes the opinion and target spans more properly. Our framework simultaneously achieves strong performance for the ASTE as well as ATE and OTE tasks. In particular, our analysis shows that our span-level approach achieves more significant improvements over the baselines on triplets with multi-word targets or opinions.",
 }
 ```
+---
