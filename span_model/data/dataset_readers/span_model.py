@@ -66,21 +66,6 @@ class SpanModelReader(DatasetReader):
 
         # tokenizer (Single Source of Truth)        
         self._tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, use_fast=True)
-        # --- [핵심 수정 2] 오류 로그 파일 핸들러 설정 ---
-
-        # self._error_log_file = None
-        # if error_log_path:
-        #     # 파일이 쓰일 디렉토리가 없으면 생성합니다.
-        #     Path(error_log_path).parent.mkdir(parents=True, exist_ok=True)
-        #     # 파일을 추가(append) 모드로 엽니다.
-        #     self._error_log_file = open(error_log_path, "a", encoding="utf-8")
-        # --- [수정 완료] ---
-
-    # --- [핵심 수정 3] 클래스가 소멸될 때 파일을 안전하게 닫도록 합니다. ---
-    # def __del__(self):
-    #     if self._error_log_file:
-    #         self._error_log_file.close()
-    # --- [수정 완료] ---
 
     @overrides
     def _read(self, file_path: str):    
