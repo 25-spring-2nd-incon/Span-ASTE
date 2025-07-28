@@ -1,4 +1,5 @@
 ## Notice (by ba2slk)
+
 본 레포지토리는 원본 [chiayewken/Span-ASTE](https://github.com/chiayewken/Span-ASTE) 모델을 포크하여 한국어 리뷰 데이터에 맞게 커스터마이징한 버전입니다. 의류 쇼핑몰 'ABLY'의 상품 리뷰와 같이, 한국어로 작성된 리뷰에서 (Aspect, Opinion, Sentiment) 삼중 항을 추출하는 데 목적을 두고 있습니다.
 ---
 ## 주요 수정 사항
